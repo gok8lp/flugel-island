@@ -57,6 +57,7 @@ npm install
 npm run lint      # eslint (gjs style)
 npm test          # unit tests for the activity model
 flugel-island@flugel/po/derle.sh --kontrol   # translations: extract, merge, compile, fail if missing
+tests/altin/island-test.sh tests/altin/altin.sh  # 71 end-to-end checks in a headless GNOME Shell (virtual pointer/touchpad)
 ```
 
 ## Licence

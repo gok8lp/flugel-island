@@ -4,7 +4,7 @@ import js from '@eslint/js';
 import globals from 'globals';
 
 export default [
-    {ignores: ['node_modules/', '**/locale/']},
+    {ignores: ['tests/altin/', 'node_modules/', '**/locale/']},
     js.configs.recommended,
     {
         files: ['flugel-island@flugel/**/*.js'],
