@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FLUGEL Island\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-14 17:57+0300\n"
+"POT-Creation-Date: 2026-10-14 23:04+0300\n"
 "PO-Revision-Date: 2026-10-14 18:00+0300\n"
 "Last-Translator: FLUGEL\n"
 "Language-Team: English\n"
@@ -59,6 +59,12 @@ msgstr "Anime & manga"
 msgid "Takip ettiklerim"
 msgstr "What I follow"
 
+msgid "Bildirimler"
+msgstr "Notifications"
+
+msgid "Sunucudan gelen son 24 saat; kategori susturma"
+msgstr "Last 24 hours from the server; mute by category"
+
 msgid "Ekran kaydı, mikrofon, kamera"
 msgstr "Screen recording, microphone, camera"
 
@@ -70,7 +76,9 @@ msgstr "Notifications from the island"
 
 msgid ""
 "Yeni bildirim adadan animasyonlu afiş olarak açılır (GNOME afişi yerine)"
-msgstr "New notifications open as an animated banner from the island (instead of GNOME's banner)"
+msgstr ""
+"New notifications open as an animated banner from the island (instead of "
+"GNOME's banner)"
 
 msgid "Panik modu"
 msgstr "Panic mode"
@@ -189,6 +197,25 @@ msgstr "On hover"
 
 msgid "Sadece tıklayınca"
 msgstr "Only on click"
+
+msgid "Tam ekranda ada"
+msgstr "Island in fullscreen"
+
+msgid ""
+"Ekranın üst kenarına yapışık çentik olur; fare üst ortaya gelince aşağı kayar"
+msgstr ""
+"Becomes a notch stuck to the top edge; slides down when the pointer reaches "
+"the top center"
+
+msgid "Sadece fareyle (oyun modu)"
+msgstr "Only with the pointer (game mode)"
+
+msgid "Bildirim ve ses/parlaklıkta da"
+msgstr "Also for notifications and volume/brightness"
+
+#
+msgid "Canlı etkinliklerde de (maç skoru…)"
+msgstr "Also for live activities (match score…)"
 
 msgid "Üzerine gelince açılma gecikmesi"
 msgstr "Hover delay"
@@ -394,17 +421,79 @@ msgstr "seconds (together with server status)"
 msgid "Kripto"
 msgstr "Crypto"
 
-msgid "Varlıklar"
-msgstr "Assets"
+msgid "İzleme listesi"
+msgstr "Watchlist"
 
-msgid "Kaynak: Binance açık piyasa verisi (anahtarsız)"
-msgstr "Source: Binance public market data (no API key)"
+#
+msgid ""
+"Kaynak: Binance açık piyasa verisi (anahtarsız). USD ve EUR: TL karşılığı."
+msgstr ""
+"Source: Binance public market data (no key). USD and EUR: value in TRY."
 
-msgid "Dolar / TL"
-msgstr "Dollar / TRY"
+msgid "Yukarı"
+msgstr "Up"
 
-msgid "Euro / TL"
-msgstr "Euro / TRY"
+msgid "Aşağı"
+msgstr "Down"
+
+msgid "Listeden çıkar"
+msgstr "Remove from list"
+
+msgid "Sembol ekle (ör. SOL, PEPE, USD)"
+msgstr "Add symbol (e.g. SOL, PEPE, USD)"
+
+#
+msgid "Fiyat alarmları"
+msgstr "Price alerts"
+
+msgid ""
+"Island'da koinin grafiğinden kurulur; fiyat eşiği geçince kapsülde uyarı "
+"çıkar ve alarm silinir."
+msgstr ""
+"Set from the coin's chart in the Island; when the price crosses the level an "
+"alert appears in the capsule and the alert is removed."
+
+msgid "Kurulu alarm yok"
+msgstr "No alerts set"
+
+msgid "Alarmı sil"
+msgstr "Delete alert"
+
+msgid "Alarm çalınca ses"
+msgstr "Sound when an alert fires"
+
+#
+msgid "Görünüm ve yenileme"
+msgstr "Appearance and refresh"
+
+msgid "Grafik açılış dönemi"
+msgstr "Default chart period"
+
+msgid "Koin ayrıntısı ilk bu dönemle açılır"
+msgstr "Coin details open with this period"
+
+msgid "1 saat"
+msgstr "1 hour"
+
+msgid "24 saat"
+msgstr "24 hours"
+
+msgid "7 gün"
+msgstr "7 days"
+
+#
+msgid "30 gün"
+msgstr "30 days"
+
+msgid "1 yıl"
+msgstr "1 year"
+
+msgid "Kartlarda küçük grafik"
+msgstr "Small chart on cards"
+
+#
+msgid "24 saatlik eğri"
+msgstr "24-hour curve"
 
 msgid "Değişimde renk kullan"
 msgstr "Colour the change"
@@ -415,14 +504,15 @@ msgstr "Black and white when off"
 msgid "Büyük değişim uyarısı"
 msgstr "Big move alert"
 
-msgid "% (24 saat)"
-msgstr "% (24 hours)"
+#
+msgid "% (24 saat, BTC ve ETH)"
+msgstr "% (24 hours, BTC and ETH)"
 
 msgid "Fiyat yenileme"
 msgstr "Price refresh"
 
-msgid "saniye"
-msgstr "seconds"
+msgid "saniye (alarmlar da bu aralıkla denetlenir)"
+msgstr "seconds (alerts are checked at this interval too)"
 
 msgid "Maçlar ve hakemlik"
 msgstr "Matches & refereeing"
@@ -445,6 +535,84 @@ msgstr "Match refresh"
 msgid "saniye (canlı maç varken sunucu 2 dk'da bir günceller)"
 msgstr "seconds (the server updates every 2 min during live matches)"
 
+msgid "Öne çıkanlar"
+msgstr "Highlights"
+
+msgid ""
+"en az bu kadar yıldızlı maçlar (favoriler, derbiler, özel maçlar her zaman)"
+msgstr ""
+"matches with at least this many stars (favorites, derbies and pinned matches "
+"always)"
+
+msgid "Favori takımlar"
+msgstr "Favorite teams"
+
+msgid ""
+"Favori takımların maçları her listede en üstte; canlıysa kapsülde önce onlar "
+"gösterilir."
+msgstr ""
+"Favorite teams' matches are on top of every list; when live they are shown "
+"in the capsule first."
+
+msgid "Favorilerden çıkar"
+msgstr "Remove from favorites"
+
+msgid "Takım ekle (ör. Galatasaray, Eternal Fire)"
+msgstr "Add team (e.g. Galatasaray, Eternal Fire)"
+
+msgid "Kategoriler"
+msgstr "Categories"
+
+msgid "Maçlar sekmesinde gösterilecek bölümler"
+msgstr "Sections shown in the Matches tab"
+
+msgid "Futbol"
+msgstr "Football"
+
+msgid "Basketbol"
+msgstr "Basketball"
+
+#
+msgid "Milli maçlar"
+msgstr "National teams"
+
+msgid "Derbiler"
+msgstr "Derbies"
+
+#
+msgid "Takımlarım"
+msgstr "My teams"
+
+#
+msgid "Özel maçlar"
+msgstr "Pinned matches"
+
+msgid ""
+"Kaynak: HLTV maçlar sayfası (bu PC'deki cs2-veri botu); ulaşılamazsa bo3.gg"
+msgstr ""
+"Source: HLTV matches page (cs2-veri bot on this PC); bo3.gg if unreachable"
+
+#
+msgid "CS2 maçları"
+msgstr "CS2 matches"
+
+msgid "Canlı raund skoru, harita, HLTV yıldızları"
+msgstr "Live round score, map, HLTV stars"
+
+#
+msgid "Kapsülde canlı CS2"
+msgstr "Live CS2 in the capsule"
+
+msgid "en az HLTV yıldızı (favori takımlar her zaman)"
+msgstr "minimum HLTV stars (favorite teams always)"
+
+#
+msgid "CS2 yenileme"
+msgstr "CS2 refresh"
+
+msgid "saniye (canlıyken raundları yakalamak için kısa tut)"
+msgstr "seconds (keep it short to catch rounds while live)"
+
 msgid ""
 "Sadece MyAnimeList / AniList ve yasal yayın platformlarına bağlantı verilir"
 msgstr "Only MyAnimeList / AniList and legal streaming platforms are linked"
@@ -457,6 +625,9 @@ msgstr "minutes before, show in the capsule"
 
 msgid "Liste yenileme"
 msgstr "List refresh"
+
+msgid "saniye"
+msgstr "seconds"
 
 msgid "Eklediğin animeler"
 msgstr "Anime you added"
@@ -571,7 +742,9 @@ msgstr "Automatic updates"
 msgid ""
 "apt, snap ve flatpak; dağıtım sürümü ve sürücü ana sürümü değişmez; sonuç "
 "bildirim olarak gelir"
-msgstr "apt, snap and flatpak; the release and the driver's major version never change; you get the result as a notification"
+msgstr ""
+"apt, snap and flatpak; the release and the driver's major version never "
+"change; you get the result as a notification"
 
 msgid "Sıklık"
 msgstr "Frequency"
@@ -637,6 +810,59 @@ msgstr "Battery Saver"
 
 msgid "Parlaklık %40, animasyonsuz"
 msgstr "40% brightness, no animations"
+
+#
+msgid "Tasarruf"
+msgstr "Power saver"
+
+#
+msgid "Dengeli"
+msgstr "Balanced"
+
+msgid "Performans"
+msgstr "Performance"
+
+msgid "Açık · tıkla: kapat"
+msgstr "On · click: turn off"
+
+msgid "Kapalı · tıkla: aç"
+msgstr "Off · click: turn on"
+
+msgid "Açık"
+msgstr "Running"
+
+#
+msgid "Uçak modu"
+msgstr "Airplane mode"
+
+#
+msgid "Tüm kablosuz bağlantılar"
+msgstr "All wireless connections"
+
+#
+msgid "Gece ışığı"
+msgstr "Night light"
+
+msgid "Ekran rengini ısıtır"
+msgstr "Makes the screen color warmer"
+
+msgid "Rahatsız etme"
+msgstr "Do not disturb"
+
+msgid "Bildirim afişleri gösterilmez (listede kalır)"
+msgstr "Notification banners are hidden (they stay in the list)"
+
+msgid "Güç modu"
+msgstr "Power mode"
+
+msgid "Tıkla: tasarruf → dengeli → performans"
+msgstr "Click: power saver → balanced → performance"
+
+msgid "Mikrofon"
+msgstr "Microphone"
+
+msgid "Sessiz"
+msgstr "Muted"
 
 msgid "Pazar"
 msgstr "Sunday"
@@ -712,6 +938,18 @@ msgstr "Keep open"
 
 msgid "Island ayarları"
 msgstr "Island settings"
+
+msgid "Ses"
+msgstr "Sound"
+
+msgid "Sesi kapat / aç"
+msgstr "Mute / unmute"
+
+msgid "Parlaklık"
+msgstr "Brightness"
+
+msgid "kapalı"
+msgstr "off"
 
 msgid "komut çalışmadı"
 msgstr "command failed"
@@ -798,14 +1036,41 @@ msgstr "Could not add to desktop"
 msgid "Masaüstüne ekle"
 msgstr "Add to desktop"
 
+#
+msgid "Yedek"
+msgstr "Backup"
+
+msgid "Servisler"
+msgstr "Services"
+
+msgid "Güvenlik"
+msgstr "Security"
+
+msgid "Disk"
+msgstr "Disk"
+
+msgid "Ağ / VPN"
+msgstr "Network / VPN"
+
+msgid "Anime"
+msgstr "Anime"
+
+#
+msgid "Günlük özet"
+msgstr "Daily summary"
+
+msgid "Diğer"
+msgstr "Other"
+
 msgid "Dosyalar"
 msgstr "Files"
 
+#
+msgid "Sağ tık: kaldır"
+msgstr "Right-click: remove"
+
 msgid "Süresiz"
 msgstr "Indefinitely"
-
-msgid "1 saat"
-msgstr "1 hour"
 
 msgid "2 saat"
 msgstr "2 hours"
@@ -836,6 +1101,14 @@ msgstr " · +%s live"
 
 msgid "Maçlar sekmesi"
 msgstr "Matches tab"
+
+#, javascript-format
+msgid "son raund: %s"
+msgstr "last round: %s"
+
+#, javascript-format
+msgid "seri %s"
+msgstr "series %s"
 
 #, javascript-format
 msgid "Maç %s · %s"
@@ -893,6 +1166,29 @@ msgid "Klavye · %s"
 msgstr "Keyboard · %s"
 
 #, javascript-format
+msgid "%s %s üstüne çıktı"
+msgstr "%s rose above %s"
+
+#, javascript-format
+msgid "%s %s altına indi"
+msgstr "%s fell below %s"
+
+#, javascript-format
+msgid "şimdi %s"
+msgstr "now %s"
+
+msgid "Grafiği aç"
+msgstr "Open chart"
+
+#, javascript-format
+msgid "Fiyat alarmı: %s %s"
+msgstr "Price alert: %s %s"
+
+#
+msgid "Kripto alarmı"
+msgstr "Crypto alert"
+
+#, javascript-format
 msgid "%s $ · 24 saat"
 msgstr "%s $ · 24 hours"
 
@@ -918,20 +1214,8 @@ msgstr "paused"
 msgid "%d yeni"
 msgstr "%d new"
 
-msgid "Bildirimler"
-msgstr "Notifications"
-
-msgid "Ses"
-msgstr "Sound"
-
-msgid "Parlaklık"
-msgstr "Brightness"
-
 msgid "Klavye ışığı"
 msgstr "Keyboard light"
-
-msgid "Mikrofon"
-msgstr "Microphone"
 
 msgid "pencereler gizli, ses kapalı"
 msgstr "windows hidden, sound muted"
@@ -1004,9 +1288,6 @@ msgstr "Feed"
 msgid "Haberi aç"
 msgstr "Open the article"
 
-msgid "Anime"
-msgstr "Anime"
-
 msgid "Manga"
 msgstr "Manga"
 
@@ -1052,16 +1333,11 @@ msgid "Bu sezon ve MAL listemdeki diğerleri; eklenenler sağ tıkla kaldırıl�
 msgstr ""
 "This season and the rest of my MAL list; right-click added ones to remove"
 
-#, javascript-format
-msgid "Son bölüm: <b>%s</b>%s"
-msgstr "Latest episode: <b>%s</b>%s"
+msgid "IMDb (son bölüm)"
+msgstr "IMDb (latest episode)"
 
-#, javascript-format
-msgid "  ·  IMDb <b>%s</b>"
-msgstr "  ·  IMDb <b>%s</b>"
-
-msgid "  ·  IMDb puanı yok"
-msgstr "  ·  no IMDb rating"
+msgid "Sıra"
+msgstr "Rank"
 
 #, javascript-format
 msgid "Sonraki: <b>%s. bölüm</b> · %s sonra"
@@ -1082,15 +1358,15 @@ msgstr "Chapter %s%s · %s"
 msgid "AniList <b>%s</b>"
 msgstr "AniList <b>%s</b>"
 
-#, javascript-format
-msgid "MAL <b>%s</b>"
-msgstr "MAL <b>%s</b>"
-
 msgid "Eklendi (sağ tıkla kaldır)"
 msgstr "Added (right-click to remove)"
 
 msgid "Tıkla: ekle"
 msgstr "Click to add"
+
+#
+msgid "bitti"
+msgstr "over"
 
 #, javascript-format
 msgid "%s sa %s dk kaldı"
@@ -1099,6 +1375,12 @@ msgstr "%s h %s min left"
 #, javascript-format
 msgid "%s dk kaldı"
 msgstr "%s min left"
+
+msgid "Milli"
+msgstr "National"
+
+msgid "Özel"
+msgstr "Pinned"
 
 #, javascript-format
 msgid "Takip: %s"
@@ -1129,11 +1411,82 @@ msgstr "Ankara basketball fixtures"
 msgid "canlı"
 msgstr "live"
 
-msgid "Maç verisi alınamadı (sunucu?)"
-msgstr "Match data unavailable (server?)"
+#
+msgid "Canlı"
+msgstr "Live"
+
+msgid "Yaklaşan (36 saat)"
+msgstr "Upcoming (36 hours)"
+
+msgid "HLTV'ye ulaşılamadı; bo3.gg verisi"
+msgstr "HLTV unreachable; data from bo3.gg"
+
+msgid "Bu gün için öne çıkan maç yok"
+msgstr "No highlighted matches for this day"
+
+msgid "Derbi yok"
+msgstr "No derbies"
+
+msgid "Favori takımlarının maçı yok"
+msgstr "No matches for your favorite teams"
+
+msgid "Favori takım yok: bir maça tıklayıp takımı ekle"
+msgstr "No favorite teams: click a match and add a team"
+
+msgid "Özel maç yok: bir maça tıklayıp sabitle"
+msgstr "No pinned matches: click a match and pin it"
+
+#
+msgid "CS2 maçı yok"
+msgstr "No CS2 matches"
+
+msgid "CS2 kapalı (Ayarlar)"
+msgstr "CS2 is off (Settings)"
 
 msgid "Maç yok"
 msgstr "No matches"
+
+msgid "Takımlarım ve özel maçlar"
+msgstr "My teams and pinned matches"
+
+msgid "DERBİ"
+msgstr "DERBY"
+
+msgid "CANLI"
+msgstr "LIVE"
+
+msgid "Bitti"
+msgstr "Final"
+
+msgid "Tıkla: favori, özel maç, maç sayfası"
+msgstr "Click: favorite, pin, match page"
+
+#, javascript-format
+msgid "HLTV: %s yıldız"
+msgstr "HLTV: %s stars"
+
+msgid "Tıkla: favori, kapsülde takip, maç sayfası"
+msgstr "Click: favorite, follow in capsule, match page"
+
+#, javascript-format
+msgid "%s favoride"
+msgstr "%s is a favorite"
+
+#, javascript-format
+msgid "%s favorilere"
+msgstr "Add %s to favorites"
+
+msgid "Özelden çıkar"
+msgstr "Unpin"
+
+msgid "Özel maç"
+msgstr "Pin match"
+
+msgid "Takibi bırak"
+msgstr "Stop following"
+
+msgid "Kapsülde takip et"
+msgstr "Follow in capsule"
 
 msgid "Hakemlik verisi yok"
 msgstr "No referee data"
@@ -1145,11 +1498,45 @@ msgstr "No assignments today or tomorrow"
 msgid "Sıradaki: %s %s · %s — %s"
 msgstr "Next: %s %s · %s — %s"
 
-msgid "Bitti"
-msgstr "Final"
+msgid "Tümü"
+msgstr "All"
 
-msgid " · tıkla: ESPN maç sayfası"
-msgstr " · click: ESPN match page"
+msgid "Uyarılar"
+msgstr "Warnings"
+
+msgid "Bilgi"
+msgstr "Info"
+
+msgid "Susturma"
+msgstr "Mute"
+
+msgid "Sunucuya ulaşılamıyor"
+msgstr "Server unreachable"
+
+msgid "Son 24 saatte bildirim yok"
+msgstr "No notifications in the last 24 hours"
+
+#, javascript-format
+msgid "%s: susturmayı kaldır"
+msgstr "%s: unmute"
+
+#, javascript-format
+msgid "%s: 8 saat sustur"
+msgstr "%s: mute for 8 hours"
+
+#, javascript-format
+msgid "%s sa kaldı"
+msgstr "%s h left"
+
+#
+msgid "1 sa"
+msgstr "1 h"
+
+msgid "8 sa"
+msgstr "8 h"
+
+msgid "Susturulan kategoriler kapsülde uyarı olarak gösterilmez"
+msgstr "Muted categories are not shown as alerts in the capsule"
 
 msgid "Zorla kapatılıyor"
 msgstr "Force quitting"
@@ -1164,6 +1551,10 @@ msgstr "%s min"
 
 msgid "Uygulamalar"
 msgstr "Apps"
+
+#
+msgid "Uygulama ara…"
+msgstr "Search apps…"
 
 msgid "Zorla kapat"
 msgstr "Force quit"
@@ -1200,6 +1591,18 @@ msgstr "Hidden windows and sound come back"
 
 msgid "Araçlar"
 msgstr "Tools"
+
+#
+msgid "Hızlı ayarlar"
+msgstr "Quick settings"
+
+#
+msgid "Sistemdeki herhangi bir uygulama; sağ tıkla kaldırılır"
+msgstr "Any app on the system; right-click to remove"
+
+#
+msgid "Tıkla: sabitle"
+msgstr "Click: pin"
 
 msgid "Video"
 msgstr "Video"
@@ -1419,9 +1822,6 @@ msgstr "Monitor"
 msgid "Sistem izleyici"
 msgstr "System monitor"
 
-msgid "Disk"
-msgstr "Disk"
-
 msgid "Disk kullanımı"
 msgstr "Disk usage"
 
@@ -1503,59 +1903,177 @@ msgstr "Maximize the active window"
 msgid "Ekran görüntüsü (Print da)"
 msgstr "Screenshot (Print too)"
 
-msgid "😊 tuşu"
-msgstr "😊 key"
+msgid "Emoji tuşu"
+msgstr "Emoji key"
 
 msgid "Emoji seçici (K380s gülen yüz tuşu)"
 msgstr "Emoji picker (K380s smiley key)"
 
-msgid "Sabitlenmiş"
-msgstr "Pinned"
+msgid "Klavye kısayolları"
+msgstr "Keyboard shortcuts"
+
+#
+msgid "Tuş kısayolları"
+msgstr "Keyboard shortcuts"
+
+#
+msgid "Sunucu ve proje klasörleri"
+msgstr "Server and project folders"
 
 #, javascript-format
 msgid "Kısayol: %s · tıklayınca şimdi yapar"
 msgstr "Shortcut: %s · click to do it now"
 
-msgid "Klavye kısayolları"
-msgstr "Keyboard shortcuts"
+#
+msgid "24 sa"
+msgstr "24 h"
 
 msgid "Şimdi yenile"
 msgstr "Refresh now"
 
-msgid "24 saat"
-msgstr "24 hours"
+msgid "Koin ara (ad ya da sembol)…"
+msgstr "Search coins (name or symbol)…"
 
-msgid "7 gün"
-msgstr "7 days"
+msgid "Koin ekle"
+msgstr "Add coin"
 
-msgid "Diğer kripto paralar"
-msgstr "Other cryptocurrencies"
-
-msgid "BTC grafiği (TradingView)"
-msgstr "BTC chart (TradingView)"
+msgid "Binance'teki bütün koinler; karta sağ tıklayınca listeden çıkar"
+msgstr "All coins on Binance; right-click a card to remove it"
 
 msgid "Fiyatlar alınamadı"
 msgstr "Prices unavailable"
 
-#, javascript-format
-msgid "En yüksek %s   ·   En düşük %s   ·   %s %s"
-msgstr "High %s   ·   Low %s   ·   %s %s"
+msgid "Binance'te yok"
+msgstr "Not on Binance"
 
 #, javascript-format
-msgid "24 saat %s · kaynak %s"
-msgstr "24 hours %s · source %s"
+msgid ""
+"24 sa: en yüksek %s · en düşük %s\n"
+"Tıkla: grafik ve alarm · sağ tık: listeden çıkar"
+msgstr ""
+"24 h: high %s · low %s\n"
+"Click: chart and alerts · right-click: remove"
+
+#, javascript-format
+msgid "%s üstüne çıkınca"
+msgstr "when above %s"
+
+#, javascript-format
+msgid "%s altına inince"
+msgstr "when below %s"
+
+#, javascript-format
+msgid "%s uzakta"
+msgstr "%s away"
+
+#
+msgid "Liste yükleniyor…"
+msgstr "Loading list…"
+
+msgid "Dolar / TL"
+msgstr "Dollar / TRY"
+
+msgid "Euro / TL"
+msgstr "Euro / TRY"
+
+#
+msgid "Bulunamadı"
+msgstr "Not found"
+
+#
+msgid "Liste alınamadı"
+msgstr "Could not load the list"
+
+#, javascript-format
+msgid "24 sa işlem hacmi: %s $ · tıkla: listeye ekle"
+msgstr "24 h volume: %s $ · click: add to list"
+
+#
+msgid "Tıkla: listeye ekle"
+msgstr "Click: add to list"
+
+#
+msgid "Listeye dön"
+msgstr "Back to list"
+
+msgid "İşaret"
+msgstr "Mark"
+
+msgid "Grafiğe tıklayınca o fiyata işaret çizgisi konur"
+msgstr "Clicking the chart puts a mark line at that price"
+
+msgid "Alarm"
+msgstr "Alert"
+
+#
+msgid "Grafiğe tıklayınca o fiyata alarm kurulur"
+msgstr "Clicking the chart sets an alert at that price"
+
+msgid "Üzerine gel: incele · basılı tutup sürükle: ölç · sağ tık: çizgiyi sil"
+msgstr "Hover: inspect · press and drag: measure · right-click: delete line"
+
+#
+msgid "Fiyat yaz, Enter"
+msgstr "Type a price, Enter"
+
+msgid "Alarm kur"
+msgstr "Set alert"
+
+msgid "Şimdiki fiyata göre alarm"
+msgstr "Alert relative to the current price"
+
+#
+msgid "Fiyat alarmı"
+msgstr "Price alert"
+
+msgid "İşaretler"
+msgstr "Marks"
+
+msgid "Bu koinin bütün işaretlerini sil"
+msgstr "Delete all marks of this coin"
+
+#, javascript-format
+msgid "%s  (24 sa)"
+msgstr "%s  (24 h)"
+
+#
+msgid "Açılış"
+msgstr "Open"
+
+msgid "En yüksek"
+msgstr "High"
+
+msgid "En düşük"
+msgstr "Low"
+
+msgid "Değişim"
+msgstr "Change"
+
+msgid "Dalgalanma"
+msgstr "Range"
+
+msgid "Grafiğe tıklayarak destek/direnç çizgisi koy"
+msgstr "Click the chart to add a support/resistance line"
+
+#
+msgid "Tıkla: işareti sil"
+msgstr "Click: delete mark"
 
 msgid "Bu bilgisayar"
 msgstr "This computer"
 
-msgid "Pil Tasarrufu (parlaklık %40, animasyonsuz)"
-msgstr "Battery Saver (40% brightness, no animations)"
+#
+msgid "Sunucu"
+msgstr "Server"
 
-msgid "Sunucu (flugelserver)"
-msgstr "Server (flugelserver)"
+msgid "Tıkla: ayrıntılar ve sıcaklık grafiği"
+msgstr "Click: details and temperature chart"
 
-msgid "Aç"
-msgstr "Open"
+msgid "Tıkla: ayrıntılar, diskler, konteynerler"
+msgstr "Click: details, disks, containers"
+
+msgid "Durum + AI"
+msgstr "Status + AI"
 
 msgid "Sunucu durumu + yapay zekâ analizi"
 msgstr "Server status + AI analysis"
@@ -1568,6 +2086,40 @@ msgstr "This PC: System Monitor"
 
 msgid "Sunucuya terminalle bağlan"
 msgstr "Connect to the server in a terminal"
+
+msgid "Pil Tasarrufu (parlaklık %40, animasyonsuz)"
+msgstr "Battery Saver (40% brightness, no animations)"
+
+msgid "Durumu şimdi sor"
+msgstr "Check status now"
+
+msgid "Aç"
+msgstr "Open"
+
+#
+msgid "Pil"
+msgstr "Battery"
+
+msgid "Durum"
+msgstr "Status"
+
+#
+msgid "okunamadı"
+msgstr "unreadable"
+
+msgid "İYİ"
+msgstr "OK"
+
+#
+msgid "ulaşılamıyor"
+msgstr "unreachable"
+
+msgid "Sunucu (flugelserver)"
+msgstr "Server (flugelserver)"
+
+#, javascript-format
+msgid "CPU sıcaklığı son %s dk: %s   ·   GPU: %s"
+msgstr "CPU temperature, last %s min: %s   ·   GPU: %s"
 
 #, javascript-format
 msgid "Okunamadı: %s"
@@ -1598,18 +2150,9 @@ msgstr "no network"
 msgid "açık"
 msgstr "on"
 
-msgid "kapalı"
-msgstr "off"
-
-msgid "Sunucuya ulaşılamıyor"
-msgstr "Server unreachable"
-
 #, javascript-format
 msgid "Durum <b>%s</b>%s%s"
 msgstr "Status <b>%s</b>%s%s"
-
-msgid "İYİ"
-msgstr "OK"
 
 msgid " (eski veri)"
 msgstr " (stale data)"
@@ -1657,9 +2200,6 @@ msgstr "Windows without GPU (same disk); connect through the console"
 msgid "Mullvad + Tailscale çıkış düğümü"
 msgstr "Mullvad + Tailscale exit node"
 
-msgid "Açık"
-msgstr "Running"
-
 msgid "Duraklatıldı"
 msgstr "Paused"
 
@@ -1674,9 +2214,6 @@ msgstr "Moonlight (Windows GPU streaming)"
 
 msgid "Yönetici"
 msgstr "Manager"
-
-msgid "Durumu şimdi sor"
-msgstr "Check status now"
 
 msgid "Sunucuya ulaşılamadı"
 msgstr "Could not reach the server"

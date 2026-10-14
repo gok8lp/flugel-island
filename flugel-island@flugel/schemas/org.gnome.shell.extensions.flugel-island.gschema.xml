@@ -65,6 +65,15 @@
       <default>'haftalik'</default>
       <summary>Otomatik güncelleme (apt, snap, flatpak): kapalı, günlük, haftalık</summary>
     </key>
+    <key name="tam-ekran-kipi" type="s">
+      <choices><choice value="gizli"/><choice value="bildirim"/><choice value="canli"/></choices>
+      <default>'bildirim'</default>
+      <summary>Tam ekranda ada (çentik): gizli = sadece fareyle, bildirim = bildirim/ses gelince de, canli = canlı etkinlik varken de</summary>
+    </key>
+    <key name="sunucu-sessiz" type="s">
+      <default>'{}'</default>
+      <summary>Susturulan sunucu bildirim kategorileri (JSON: kategori → bitiş zamanı, 0 = süresiz)</summary>
+    </key>
     <key name="pip-konum" type="s">
       <default>''</default>
       <summary>Resim içinde resim penceresinin son konumu ve boyutu (JSON; boş = sol alt köşe)</summary>
@@ -120,7 +129,7 @@
       <summary>Kısa süreli bildirimlerin (ses, şarj, cihaz) ekranda kalma süresi (ms)</summary>
     </key>
     <key name="osd-yerine" type="b">
-      <default>false</default>
+      <default>true</default>
       <summary>Ses/parlaklık için GNOME'un ekran ortasındaki göstergesi yerine Island'ı kullan</summary>
     </key>
     <key name="kripto-esik" type="d">
@@ -132,9 +141,69 @@
       <default>true</default>
       <summary>Canlı maç olunca kapsülde canlı etkinlik olarak göster</summary>
     </key>
+    <key name="mac-favoriler" type="as">
+      <default>['Turkey']</default>
+      <summary>Favori takımlar (futbol, basketbol, milli, CS2; ad içinde geçen metin, büyük/küçük harf ve aksan önemsiz)</summary>
+    </key>
+    <key name="mac-ozel" type="as">
+      <default>[]</default>
+      <summary>Özel maçlar (sabitlenen maç anahtarları)</summary>
+    </key>
+    <key name="mac-kategori" type="s">
+      <default>'onemli'</default>
+      <summary>Maçlar sekmesinde son seçilen kategori</summary>
+    </key>
+    <key name="mac-kategoriler" type="as">
+      <default>['onemli', 'futbol', 'basketbol', 'milli', 'derbi', 'takimlar', 'ozel', 'cs2']</default>
+      <summary>Gösterilen kategoriler ve sırası</summary>
+    </key>
+    <key name="mac-min-yildiz" type="i">
+      <range min="0" max="5"/>
+      <default>2</default>
+      <summary>Öne çıkanlar: en az bu kadar yıldızlı maçlar (favoriler, derbiler ve özel maçlar her zaman)</summary>
+    </key>
+    <key name="cs2-etkin" type="b">
+      <default>true</default>
+      <summary>CS2 maçları (HLTV)</summary>
+    </key>
+    <key name="cs2-min-yildiz" type="i">
+      <range min="0" max="5"/>
+      <default>1</default>
+      <summary>Canlı CS2 maçı kapsülde: en az bu kadar HLTV yıldızı (favori takımlar her zaman)</summary>
+    </key>
+    <key name="cs2-takip" type="i">
+      <default>0</default>
+      <summary>Kapsülde takip edilen CS2 maçı (HLTV maç numarası, 0 = otomatik)</summary>
+    </key>
+    <key name="yenileme-cs2" type="i">
+      <range min="20" max="600"/>
+      <default>40</default>
+      <summary>CS2 yenileme aralığı (sn; canlı maç yokken veri 5 dk önbellekten gelir)</summary>
+    </key>
     <key name="kripto-varliklar" type="as">
-      <default>['BTC', 'ETH', 'USD', 'EUR']</default>
-      <summary>Kripto sekmesinde gösterilecek varlıklar (BTC, ETH, USD, EUR)</summary>
+      <default>['BTC', 'ETH', 'SOL', 'BNB', 'XRP', 'DOGE', 'USD', 'EUR']</default>
+      <summary>Kripto izleme listesi (Binance sembolleri; USD ve EUR: TL karşılığı), kartlar bu sırayla dizilir</summary>
+    </key>
+    <key name="kripto-alarmlar" type="s">
+      <default>'[]'</default>
+      <summary>Fiyat alarmları (JSON: [{id, s, fiyat, yon}])</summary>
+    </key>
+    <key name="kripto-isaretler" type="s">
+      <default>'{}'</default>
+      <summary>Grafik işaretleri (JSON: {sembol: [fiyat]})</summary>
+    </key>
+    <key name="kripto-donem" type="s">
+      <choices><choice value="1s"/><choice value="24s"/><choice value="7g"/><choice value="30g"/><choice value="1y"/></choices>
+      <default>'24s'</default>
+      <summary>Ayrıntı grafiğinin açılış dönemi</summary>
+    </key>
+    <key name="kripto-mini-grafik" type="b">
+      <default>true</default>
+      <summary>Kartlarda küçük grafik</summary>
+    </key>
+    <key name="kripto-alarm-ses" type="b">
+      <default>true</default>
+      <summary>Alarm çalınca ses</summary>
     </key>
     <key name="kripto-renk" type="b">
       <default>false</default>

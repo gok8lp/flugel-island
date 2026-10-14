@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FLUGEL Island\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-14 18:00+0300\n"
+"POT-Creation-Date: 2026-10-14 23:22+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,6 +57,12 @@ msgid "Anime ve manga"
 msgstr ""
 
 msgid "Takip ettiklerim"
+msgstr ""
+
+msgid "Bildirimler"
+msgstr ""
+
+msgid "Sunucudan gelen son 24 saat; kategori susturma"
 msgstr ""
 
 msgid "Ekran kaydı, mikrofon, kamera"
@@ -183,6 +189,22 @@ msgid "Üzerine gelince"
 msgstr ""
 
 msgid "Sadece tıklayınca"
+msgstr ""
+
+msgid "Tam ekranda ada"
+msgstr ""
+
+msgid ""
+"Ekranın üst kenarına yapışık çentik olur; fare üst ortaya gelince aşağı kayar"
+msgstr ""
+
+msgid "Sadece fareyle (oyun modu)"
+msgstr ""
+
+msgid "Bildirim ve ses/parlaklıkta da"
+msgstr ""
+
+msgid "Canlı etkinliklerde de (maç skoru…)"
 msgstr ""
 
 msgid "Üzerine gelince açılma gecikmesi"
@@ -379,16 +401,70 @@ msgstr ""
 msgid "Kripto"
 msgstr ""
 
-msgid "Varlıklar"
+msgid "İzleme listesi"
 msgstr ""
 
-msgid "Kaynak: Binance açık piyasa verisi (anahtarsız)"
+msgid ""
+"Kaynak: Binance açık piyasa verisi (anahtarsız). USD ve EUR: TL karşılığı."
 msgstr ""
 
-msgid "Dolar / TL"
+msgid "Yukarı"
 msgstr ""
 
-msgid "Euro / TL"
+msgid "Aşağı"
+msgstr ""
+
+msgid "Listeden çıkar"
+msgstr ""
+
+msgid "Sembol ekle (ör. SOL, PEPE, USD)"
+msgstr ""
+
+msgid "Fiyat alarmları"
+msgstr ""
+
+msgid ""
+"Island'da koinin grafiğinden kurulur; fiyat eşiği geçince kapsülde uyarı "
+"çıkar ve alarm silinir."
+msgstr ""
+
+msgid "Kurulu alarm yok"
+msgstr ""
+
+msgid "Alarmı sil"
+msgstr ""
+
+msgid "Alarm çalınca ses"
+msgstr ""
+
+msgid "Görünüm ve yenileme"
+msgstr ""
+
+msgid "Grafik açılış dönemi"
+msgstr ""
+
+msgid "Koin ayrıntısı ilk bu dönemle açılır"
+msgstr ""
+
+msgid "1 saat"
+msgstr ""
+
+msgid "24 saat"
+msgstr ""
+
+msgid "7 gün"
+msgstr ""
+
+msgid "30 gün"
+msgstr ""
+
+msgid "1 yıl"
+msgstr ""
+
+msgid "Kartlarda küçük grafik"
+msgstr ""
+
+msgid "24 saatlik eğri"
 msgstr ""
 
 msgid "Değişimde renk kullan"
@@ -400,13 +476,13 @@ msgstr ""
 msgid "Büyük değişim uyarısı"
 msgstr ""
 
-msgid "% (24 saat)"
+msgid "% (24 saat, BTC ve ETH)"
 msgstr ""
 
 msgid "Fiyat yenileme"
 msgstr ""
 
-msgid "saniye"
+msgid "saniye (alarmlar da bu aralıkla denetlenir)"
 msgstr ""
 
 msgid "Maçlar ve hakemlik"
@@ -430,6 +506,73 @@ msgstr ""
 msgid "saniye (canlı maç varken sunucu 2 dk'da bir günceller)"
 msgstr ""
 
+msgid "Öne çıkanlar"
+msgstr ""
+
+msgid ""
+"en az bu kadar yıldızlı maçlar (favoriler, derbiler, özel maçlar her zaman)"
+msgstr ""
+
+msgid "Favori takımlar"
+msgstr ""
+
+msgid ""
+"Favori takımların maçları her listede en üstte; canlıysa kapsülde önce onlar "
+"gösterilir."
+msgstr ""
+
+msgid "Favorilerden çıkar"
+msgstr ""
+
+msgid "Takım ekle (ör. Galatasaray, Eternal Fire)"
+msgstr ""
+
+msgid "Kategoriler"
+msgstr ""
+
+msgid "Maçlar sekmesinde gösterilecek bölümler"
+msgstr ""
+
+msgid "Futbol"
+msgstr ""
+
+msgid "Basketbol"
+msgstr ""
+
+msgid "Milli maçlar"
+msgstr ""
+
+msgid "Derbiler"
+msgstr ""
+
+msgid "Takımlarım"
+msgstr ""
+
+msgid "Özel maçlar"
+msgstr ""
+
+msgid ""
+"Kaynak: HLTV maçlar sayfası (bu PC'deki cs2-veri botu); ulaşılamazsa bo3.gg"
+msgstr ""
+
+msgid "CS2 maçları"
+msgstr ""
+
+msgid "Canlı raund skoru, harita, HLTV yıldızları"
+msgstr ""
+
+msgid "Kapsülde canlı CS2"
+msgstr ""
+
+msgid "en az HLTV yıldızı (favori takımlar her zaman)"
+msgstr ""
+
+msgid "CS2 yenileme"
+msgstr ""
+
+msgid "saniye (canlıyken raundları yakalamak için kısa tut)"
+msgstr ""
+
 msgid ""
 "Sadece MyAnimeList / AniList ve yasal yayın platformlarına bağlantı verilir"
 msgstr ""
@@ -441,6 +584,9 @@ msgid "dakika kala kapsülde göster"
 msgstr ""
 
 msgid "Liste yenileme"
+msgstr ""
+
+msgid "saniye"
 msgstr ""
 
 msgid "Eklediğin animeler"
@@ -621,6 +767,54 @@ msgstr ""
 msgid "Parlaklık %40, animasyonsuz"
 msgstr ""
 
+msgid "Tasarruf"
+msgstr ""
+
+msgid "Dengeli"
+msgstr ""
+
+msgid "Performans"
+msgstr ""
+
+msgid "Açık · tıkla: kapat"
+msgstr ""
+
+msgid "Kapalı · tıkla: aç"
+msgstr ""
+
+msgid "Açık"
+msgstr ""
+
+msgid "Uçak modu"
+msgstr ""
+
+msgid "Tüm kablosuz bağlantılar"
+msgstr ""
+
+msgid "Gece ışığı"
+msgstr ""
+
+msgid "Ekran rengini ısıtır"
+msgstr ""
+
+msgid "Rahatsız etme"
+msgstr ""
+
+msgid "Bildirim afişleri gösterilmez (listede kalır)"
+msgstr ""
+
+msgid "Güç modu"
+msgstr ""
+
+msgid "Tıkla: tasarruf → dengeli → performans"
+msgstr ""
+
+msgid "Mikrofon"
+msgstr ""
+
+msgid "Sessiz"
+msgstr ""
+
 msgid "Pazar"
 msgstr ""
 
@@ -694,6 +888,18 @@ msgid "Açık tut"
 msgstr ""
 
 msgid "Island ayarları"
+msgstr ""
+
+msgid "Ses"
+msgstr ""
+
+msgid "Sesi kapat / aç"
+msgstr ""
+
+msgid "Parlaklık"
+msgstr ""
+
+msgid "kapalı"
 msgstr ""
 
 msgid "komut çalışmadı"
@@ -781,13 +987,37 @@ msgstr ""
 msgid "Masaüstüne ekle"
 msgstr ""
 
+msgid "Yedek"
+msgstr ""
+
+msgid "Servisler"
+msgstr ""
+
+msgid "Güvenlik"
+msgstr ""
+
+msgid "Disk"
+msgstr ""
+
+msgid "Ağ / VPN"
+msgstr ""
+
+msgid "Anime"
+msgstr ""
+
+msgid "Günlük özet"
+msgstr ""
+
+msgid "Diğer"
+msgstr ""
+
 msgid "Dosyalar"
 msgstr ""
 
-msgid "Süresiz"
+msgid "Sağ tık: kaldır"
 msgstr ""
 
-msgid "1 saat"
+msgid "Süresiz"
 msgstr ""
 
 msgid "2 saat"
@@ -818,6 +1048,14 @@ msgid " · +%s canlı"
 msgstr ""
 
 msgid "Maçlar sekmesi"
+msgstr ""
+
+#, javascript-format
+msgid "son raund: %s"
+msgstr ""
+
+#, javascript-format
+msgid "seri %s"
 msgstr ""
 
 #, javascript-format
@@ -876,6 +1114,28 @@ msgid "Klavye · %s"
 msgstr ""
 
 #, javascript-format
+msgid "%s %s üstüne çıktı"
+msgstr ""
+
+#, javascript-format
+msgid "%s %s altına indi"
+msgstr ""
+
+#, javascript-format
+msgid "şimdi %s"
+msgstr ""
+
+msgid "Grafiği aç"
+msgstr ""
+
+#, javascript-format
+msgid "Fiyat alarmı: %s %s"
+msgstr ""
+
+msgid "Kripto alarmı"
+msgstr ""
+
+#, javascript-format
 msgid "%s $ · 24 saat"
 msgstr ""
 
@@ -901,19 +1161,7 @@ msgstr ""
 msgid "%d yeni"
 msgstr ""
 
-msgid "Bildirimler"
-msgstr ""
-
-msgid "Ses"
-msgstr ""
-
-msgid "Parlaklık"
-msgstr ""
-
 msgid "Klavye ışığı"
-msgstr ""
-
-msgid "Mikrofon"
 msgstr ""
 
 msgid "pencereler gizli, ses kapalı"
@@ -987,9 +1235,6 @@ msgstr ""
 msgid "Haberi aç"
 msgstr ""
 
-msgid "Anime"
-msgstr ""
-
 msgid "Manga"
 msgstr ""
 
@@ -1034,15 +1279,10 @@ msgstr ""
 msgid "Bu sezon ve MAL listemdeki diğerleri; eklenenler sağ tıkla kaldırılır"
 msgstr ""
 
-#, javascript-format
-msgid "Son bölüm: <b>%s</b>%s"
+msgid "IMDb (son bölüm)"
 msgstr ""
 
-#, javascript-format
-msgid "  ·  IMDb <b>%s</b>"
-msgstr ""
-
-msgid "  ·  IMDb puanı yok"
+msgid "Sıra"
 msgstr ""
 
 #, javascript-format
@@ -1064,14 +1304,13 @@ msgstr ""
 msgid "AniList <b>%s</b>"
 msgstr ""
 
-#, javascript-format
-msgid "MAL <b>%s</b>"
-msgstr ""
-
 msgid "Eklendi (sağ tıkla kaldır)"
 msgstr ""
 
 msgid "Tıkla: ekle"
+msgstr ""
+
+msgid "bitti"
 msgstr ""
 
 #, javascript-format
@@ -1080,6 +1319,12 @@ msgstr ""
 
 #, javascript-format
 msgid "%s dk kaldı"
+msgstr ""
+
+msgid "Milli"
+msgstr ""
+
+msgid "Özel"
 msgstr ""
 
 #, javascript-format
@@ -1111,10 +1356,79 @@ msgstr ""
 msgid "canlı"
 msgstr ""
 
-msgid "Maç verisi alınamadı (sunucu?)"
+msgid "Canlı"
+msgstr ""
+
+msgid "Yaklaşan (36 saat)"
+msgstr ""
+
+msgid "HLTV'ye ulaşılamadı; bo3.gg verisi"
+msgstr ""
+
+msgid "Bu gün için öne çıkan maç yok"
+msgstr ""
+
+msgid "Derbi yok"
+msgstr ""
+
+msgid "Favori takımlarının maçı yok"
+msgstr ""
+
+msgid "Favori takım yok: bir maça tıklayıp takımı ekle"
+msgstr ""
+
+msgid "Özel maç yok: bir maça tıklayıp sabitle"
+msgstr ""
+
+msgid "CS2 maçı yok"
+msgstr ""
+
+msgid "CS2 kapalı (Ayarlar)"
 msgstr ""
 
 msgid "Maç yok"
+msgstr ""
+
+msgid "Takımlarım ve özel maçlar"
+msgstr ""
+
+msgid "DERBİ"
+msgstr ""
+
+msgid "CANLI"
+msgstr ""
+
+msgid "Bitti"
+msgstr ""
+
+msgid "Tıkla: favori, özel maç, maç sayfası"
+msgstr ""
+
+#, javascript-format
+msgid "HLTV: %s yıldız"
+msgstr ""
+
+msgid "Tıkla: favori, kapsülde takip, maç sayfası"
+msgstr ""
+
+#, javascript-format
+msgid "%s favoride"
+msgstr ""
+
+#, javascript-format
+msgid "%s favorilere"
+msgstr ""
+
+msgid "Özelden çıkar"
+msgstr ""
+
+msgid "Özel maç"
+msgstr ""
+
+msgid "Takibi bırak"
+msgstr ""
+
+msgid "Kapsülde takip et"
 msgstr ""
 
 msgid "Hakemlik verisi yok"
@@ -1127,10 +1441,43 @@ msgstr ""
 msgid "Sıradaki: %s %s · %s — %s"
 msgstr ""
 
-msgid "Bitti"
+msgid "Tümü"
 msgstr ""
 
-msgid " · tıkla: ESPN maç sayfası"
+msgid "Uyarılar"
+msgstr ""
+
+msgid "Bilgi"
+msgstr ""
+
+msgid "Susturma"
+msgstr ""
+
+msgid "Sunucuya ulaşılamıyor"
+msgstr ""
+
+msgid "Son 24 saatte bildirim yok"
+msgstr ""
+
+#, javascript-format
+msgid "%s: susturmayı kaldır"
+msgstr ""
+
+#, javascript-format
+msgid "%s: 8 saat sustur"
+msgstr ""
+
+#, javascript-format
+msgid "%s sa kaldı"
+msgstr ""
+
+msgid "1 sa"
+msgstr ""
+
+msgid "8 sa"
+msgstr ""
+
+msgid "Susturulan kategoriler kapsülde uyarı olarak gösterilmez"
 msgstr ""
 
 msgid "Zorla kapatılıyor"
@@ -1145,6 +1492,9 @@ msgid "%s dk"
 msgstr ""
 
 msgid "Uygulamalar"
+msgstr ""
+
+msgid "Uygulama ara…"
 msgstr ""
 
 msgid "Zorla kapat"
@@ -1181,6 +1531,15 @@ msgid "Gizlenen pencereler ve ses geri gelir"
 msgstr ""
 
 msgid "Araçlar"
+msgstr ""
+
+msgid "Hızlı ayarlar"
+msgstr ""
+
+msgid "Sistemdeki herhangi bir uygulama; sağ tıkla kaldırılır"
+msgstr ""
+
+msgid "Tıkla: sabitle"
 msgstr ""
 
 msgid "Video"
@@ -1399,9 +1758,6 @@ msgstr ""
 msgid "Sistem izleyici"
 msgstr ""
 
-msgid "Disk"
-msgstr ""
-
 msgid "Disk kullanımı"
 msgstr ""
 
@@ -1483,58 +1839,160 @@ msgstr ""
 msgid "Ekran görüntüsü (Print da)"
 msgstr ""
 
-msgid "😊 tuşu"
+msgid "Emoji tuşu"
 msgstr ""
 
 msgid "Emoji seçici (K380s gülen yüz tuşu)"
 msgstr ""
 
-msgid "Sabitlenmiş"
+msgid "Klavye kısayolları"
+msgstr ""
+
+msgid "Tuş kısayolları"
+msgstr ""
+
+msgid "Sunucu ve proje klasörleri"
 msgstr ""
 
 #, javascript-format
 msgid "Kısayol: %s · tıklayınca şimdi yapar"
 msgstr ""
 
-msgid "Klavye kısayolları"
+msgid "24 sa"
 msgstr ""
 
 msgid "Şimdi yenile"
 msgstr ""
 
-msgid "24 saat"
+msgid "Koin ara (ad ya da sembol)…"
 msgstr ""
 
-msgid "7 gün"
+msgid "Koin ekle"
 msgstr ""
 
-msgid "Diğer kripto paralar"
-msgstr ""
-
-msgid "BTC grafiği (TradingView)"
+msgid "Binance'teki bütün koinler; karta sağ tıklayınca listeden çıkar"
 msgstr ""
 
 msgid "Fiyatlar alınamadı"
 msgstr ""
 
-#, javascript-format
-msgid "En yüksek %s   ·   En düşük %s   ·   %s %s"
+msgid "Binance'te yok"
 msgstr ""
 
 #, javascript-format
-msgid "24 saat %s · kaynak %s"
+msgid ""
+"24 sa: en yüksek %s · en düşük %s\n"
+"Tıkla: grafik ve alarm · sağ tık: listeden çıkar"
+msgstr ""
+
+#, javascript-format
+msgid "%s üstüne çıkınca"
+msgstr ""
+
+#, javascript-format
+msgid "%s altına inince"
+msgstr ""
+
+#, javascript-format
+msgid "%s uzakta"
+msgstr ""
+
+msgid "Liste yükleniyor…"
+msgstr ""
+
+msgid "Dolar / TL"
+msgstr ""
+
+msgid "Euro / TL"
+msgstr ""
+
+msgid "Bulunamadı"
+msgstr ""
+
+msgid "Liste alınamadı"
+msgstr ""
+
+#, javascript-format
+msgid "24 sa işlem hacmi: %s $ · tıkla: listeye ekle"
+msgstr ""
+
+msgid "Tıkla: listeye ekle"
+msgstr ""
+
+msgid "Listeye dön"
+msgstr ""
+
+msgid "İşaret"
+msgstr ""
+
+msgid "Grafiğe tıklayınca o fiyata işaret çizgisi konur"
+msgstr ""
+
+msgid "Alarm"
+msgstr ""
+
+msgid "Grafiğe tıklayınca o fiyata alarm kurulur"
+msgstr ""
+
+msgid "Üzerine gel: incele · basılı tutup sürükle: ölç · sağ tık: çizgiyi sil"
+msgstr ""
+
+msgid "Fiyat yaz, Enter"
+msgstr ""
+
+msgid "Alarm kur"
+msgstr ""
+
+msgid "Şimdiki fiyata göre alarm"
+msgstr ""
+
+msgid "Fiyat alarmı"
+msgstr ""
+
+msgid "İşaretler"
+msgstr ""
+
+msgid "Bu koinin bütün işaretlerini sil"
+msgstr ""
+
+#, javascript-format
+msgid "%s  (24 sa)"
+msgstr ""
+
+msgid "Açılış"
+msgstr ""
+
+msgid "En yüksek"
+msgstr ""
+
+msgid "En düşük"
+msgstr ""
+
+msgid "Değişim"
+msgstr ""
+
+msgid "Dalgalanma"
+msgstr ""
+
+msgid "Grafiğe tıklayarak destek/direnç çizgisi koy"
+msgstr ""
+
+msgid "Tıkla: işareti sil"
 msgstr ""
 
 msgid "Bu bilgisayar"
 msgstr ""
 
-msgid "Pil Tasarrufu (parlaklık %40, animasyonsuz)"
+msgid "Sunucu"
 msgstr ""
 
-msgid "Sunucu (flugelserver)"
+msgid "Tıkla: ayrıntılar ve sıcaklık grafiği"
 msgstr ""
 
-msgid "Aç"
+msgid "Tıkla: ayrıntılar, diskler, konteynerler"
+msgstr ""
+
+msgid "Durum + AI"
 msgstr ""
 
 msgid "Sunucu durumu + yapay zekâ analizi"
@@ -1547,6 +2005,37 @@ msgid "Bu PC: Sistem İzleyici"
 msgstr ""
 
 msgid "Sunucuya terminalle bağlan"
+msgstr ""
+
+msgid "Pil Tasarrufu (parlaklık %40, animasyonsuz)"
+msgstr ""
+
+msgid "Durumu şimdi sor"
+msgstr ""
+
+msgid "Aç"
+msgstr ""
+
+msgid "Pil"
+msgstr ""
+
+msgid "Durum"
+msgstr ""
+
+msgid "okunamadı"
+msgstr ""
+
+msgid "İYİ"
+msgstr ""
+
+msgid "ulaşılamıyor"
+msgstr ""
+
+msgid "Sunucu (flugelserver)"
+msgstr ""
+
+#, javascript-format
+msgid "CPU sıcaklığı son %s dk: %s   ·   GPU: %s"
 msgstr ""
 
 #, javascript-format
@@ -1578,17 +2067,8 @@ msgstr ""
 msgid "açık"
 msgstr ""
 
-msgid "kapalı"
-msgstr ""
-
-msgid "Sunucuya ulaşılamıyor"
-msgstr ""
-
 #, javascript-format
 msgid "Durum <b>%s</b>%s%s"
-msgstr ""
-
-msgid "İYİ"
 msgstr ""
 
 msgid " (eski veri)"
@@ -1637,9 +2117,6 @@ msgstr ""
 msgid "Mullvad + Tailscale çıkış düğümü"
 msgstr ""
 
-msgid "Açık"
-msgstr ""
-
 msgid "Duraklatıldı"
 msgstr ""
 
@@ -1653,9 +2130,6 @@ msgid "Moonlight (Windows GPU akışı)"
 msgstr ""
 
 msgid "Yönetici"
-msgstr ""
-
-msgid "Durumu şimdi sor"
 msgstr ""
 
 msgid "Sunucuya ulaşılamadı"

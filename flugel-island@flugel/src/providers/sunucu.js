@@ -5,8 +5,9 @@
 import GLib from 'gi://GLib';
 import {createActivity} from '../activity.js';
 import {oncelik} from './provider-base.js';
-import {KIRMIZI, SARI, SOLUK, calistir} from '../ortak.js';
+import {KIRMIZI, SARI, SOLUK, calistir, emojisiz} from '../ortak.js';
 import {vmKomut} from '../sayfalar/vm.js';
+import {kategori, sessizMi} from '../sunucu-bildirim.js';
 import {_, f} from '../dil.js';
 
 export class SunucuProvider {
@@ -44,7 +45,11 @@ export class SunucuProvider {
             this._manager.remove(`${this.id}:uyari`);
             return;
         }
-        const sorunlar = s.sorunlar || [];
+        const sorunlar = (s.sorunlar || []).filter(x => !sessizMi(this._settings, kategori(x).k));
+        if (!sorunlar.length) {
+            this._manager.remove(`${this.id}:uyari`);
+            return;
+        }
         // imzada sayılar yok: "Yük yüksek: 5dk ort 16" ile "… ort 37" aynı sorun sayılır
         const imza = `${s.durum}|${sorunlar.map(x => x.replace(/[\d.,]+/g, '#')).sort().join('|')}`;
         if (this._settings.get_string('sunucu-goruldu') === imza) {
@@ -55,7 +60,7 @@ export class SunucuProvider {
             id: `${this.id}:uyari`, providerId: this.id, tier: 'persistent', slot: 'either',
             priority: oncelik(this._settings, this.id, kritik ? 50 : 0),
             glyph: 'dialog-warning-symbolic',
-            label: f(_('Sunucu: %s'), sorunlar[0] ?? s.durum),
+            label: f(_('Sunucu: %s'), emojisiz(sorunlar[0] ?? s.durum)),
             sublabel: sorunlar.length > 1 ? f(_('+%s sorun daha'), sorunlar.length - 1) : (s.eski ? _('eski veri') : 'flugelserver'),
             data: {renk: kritik ? KIRMIZI : SARI, kisa: '!', eylemler: [
                 {ikon: 'utilities-system-monitor-symbolic', ipucu: _('Sistem sekmesini aç'), fn: () => this._ortam.sekmeAc('sistem')},

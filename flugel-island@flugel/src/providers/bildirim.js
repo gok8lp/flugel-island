@@ -6,6 +6,7 @@ import Gio from 'gi://Gio';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import {createActivity, _now} from '../activity.js';
 import {oncelik} from './provider-base.js';
+import {emojisiz} from '../ortak.js';
 import {_} from '../dil.js';
 
 const DUSUK = 0;
@@ -30,11 +31,13 @@ export class BildirimProvider {
         // ada görünürken GNOME afişi bastırılır; tam ekranda (ada gizli) GNOME'unki çalışır
         this._kok = this._ortam.adaKok?.();
         this._gorunurId = this._kok?.connect('notify::visible', () => this._engelle()) ?? 0;
+        this._kipId = settings.connect('changed::tam-ekran-kipi', () => this._engelle());
         this._engelle();
     }
 
+    // ada bildirimi gösterebiliyorsa (tam ekranda çentik dahil) GNOME afişi bastırılır
     _engelle() {
-        this._tray.bannerBlocked = !!this._kok?.visible;
+        this._tray.bannerBlocked = !!this._ortam.adaGorunur?.();
     }
 
     _bagla(kaynak) {
@@ -66,8 +69,8 @@ export class BildirimProvider {
             id: `${this.id}:afis`, providerId: this.id, tier: 'transient', slot: 'either',
             priority: oncelik(this._settings, this.id),
             glyph: simge ?? 'mail-unread-symbolic',
-            label: n.title || kaynak.title || _('Bildirim'),
-            sublabel: n.body || null,
+            label: emojisiz(n.title || kaynak.title) || _('Bildirim'),
+            sublabel: emojisiz(n.body) || null,
             startedAt: now,
             expiresAt: now + this._settings.get_int('bildirim-sure') * 1000,
             data: {bildirim: true, uygulama: kaynak.title ?? '', kaynakSimge: kaynak.icon ?? null,
@@ -87,6 +90,9 @@ export class BildirimProvider {
             this._birak(k);
         if (this._gorunurId)
             this._kok.disconnect(this._gorunurId);
+        if (this._kipId)
+            this._settings.disconnect(this._kipId);
+        this._kipId = 0;
         this._gorunurId = 0;
         if (this._tray)
             this._tray.bannerBlocked = false;

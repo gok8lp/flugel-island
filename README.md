@@ -26,8 +26,12 @@ Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [READ
 - **Notifications** open as an animated banner from the island instead of GNOME's banner.
 - **Card tabs:** Quick (pinned apps, force quit, panic, keep-awake, screenshot/recording), Shortcuts (icon grid +
   keyboard shortcuts), System (PC, battery, server), Virtual machines (cards with start/connect/graceful shutdown),
-  Crypto (sparklines, 24 h / 7 d chart), Matches (my assignments, today/tomorrow/past), Anime & manga (covers with
-  title and MAL score, hover preview with Turkish summary, IMDb rating, legal streaming links).
+  Crypto (any Binance coin in a watchlist; 1 h to 1 y chart with hover crosshair, drag-to-measure, support/resistance
+  marks and price alerts that fire in the capsule), Matches (Highlights, Football, Basketball, National teams,
+  Derbies, My teams, Pinned, CS2; HLTV-style 0–5 stars, favorite teams on top; live CS2 round score in the capsule
+  with the round winner highlighted), Anime & manga (covers with title and MAL score; click for details with the
+  MyAnimeList synopsis, IMDb rating, legal streaming links), Notifications (the server's last 24 h, hover to expand,
+  mute by category).
 - **Window helpers:** picture-in-picture always opens bottom-left and remembers where you put it; "Add to desktop".
 - **Dock:** hover magnification for Ubuntu Dock / Dash to Dock icons.
 - **Touchpad:** two-finger scroll on the capsule switches workspaces.
@@ -35,7 +39,7 @@ Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [READ
   automatic updates, language Türkçe/English).
 
 ## Requirements
-GNOME Shell 50 (Wayland). The data tabs read JSON from small helper scripts (`ust-panel-veri`, `vm`) that live in
+GNOME Shell 50 (Wayland). The data tabs read JSON from small helper scripts (`ust-panel-veri`, `cs2-veri`, `vm`) that live in
 the main [FLUGEL](https://github.com/gok8lp/flugel) repository and talk to a home server; without them the island,
 live activities, notifications, PiP and shortcuts still work and the data tabs show "unavailable".
 

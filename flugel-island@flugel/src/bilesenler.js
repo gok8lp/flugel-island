@@ -111,8 +111,9 @@ export class Karo {
         this._etiket.clutter_text.ellipsize = Pango.EllipsizeMode.END;
         kutu.add_child(this._etiket);
         this.actor.set_child(kutu);
-        if (o.eylem)
-            this.actor.connect('clicked', () => this._o.eylem());
+        // sol tık: eylem, sağ tık: sagTik (ör. sabitlenmiş uygulamayı kaldır)
+        this.actor.button_mask = St.ButtonMask.ONE | St.ButtonMask.THREE;
+        this.actor.connect('clicked', (_b, n) => (n === 3 ? this._o.sagTik?.() : this._o.eylem?.()));
         if (o.ipucu)
             ipucuBagla(this.actor, () => this._o.ipucu);
         this.rozet(o.rozet);
@@ -309,7 +310,7 @@ export class ResimKaro {
         if (!yol || typeof yol !== 'string')
             return 'background-color: rgba(255,255,255,0.06);';
         const uri = GLib.filename_to_uri(yol, null).replace(/"/g, '%22');
-        return `background-image: url("${uri}"); background-size: cover; background-position: center;`;
+        return `background-image: url("${uri}"); background-size: cover;`;
     }
 
     static icon(r) {

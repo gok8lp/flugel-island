@@ -15,8 +15,11 @@ tema, dokunmatik yüzeyli dizüstü için tasarlandı. English: [README.md](READ
   sunucu uyarısı, GPU sanal makinesi, çalan medya, hakemlik maçlarım ve canlı skor, anime bölümü, kripto hareketi,
   ses/parlaklık, şarj, kablosuz klavye/fare, haber takip kelimesi.
 - **Bildirimler** GNOME afişi yerine adadan animasyonlu afiş olarak açılır.
-- **Sekmeler:** Hızlı, Kısayollar, Sistem, Sanal makineler, Kripto (grafikli), Maçlar, Anime ve manga (kapaklı,
-  MAL puanlı, Türkçe açıklamalı önizleme, IMDb puanı, yasal izleme bağlantıları).
+- **Sekmeler:** Hızlı, Kısayollar, Sistem, Sanal makineler, Kripto (Binance'teki her koin; 1 saatten 1 yıla grafik,
+  imleçle inceleme, sürükleyerek ölçme, işaret çizgileri, kapsülde çalan fiyat alarmları), Maçlar (Öne çıkanlar,
+  Futbol, Basketbol, Milli, Derbiler, Takımlarım, Özel, CS2; HLTV gibi 0-5 yıldız, favori takımlar üstte, kapsülde
+  canlı CS2 raund skoru ve raundu alan takım), Anime ve manga (kapaklı, MAL puanlı; tıklayınca MyAnimeList
+  açıklaması, IMDb puanı, yasal izleme bağlantıları), Bildirimler (sunucunun son 24 saati, kategori susturma).
 - **Pencere yardımcıları:** resim içinde resim hep sol altta ve son konumu hatırlanır; "Masaüstüne ekle".
 - **Dock:** simgeler üzerine gelince büyür. **Dokunmatik yüzey:** kapsülde iki parmakla kaydırınca çalışma alanı değişir.
 - **Ayarlar:** 11 sayfalık Adwaita penceresi (her ayar, sayfa sıfırlama, JSON dışa/içe aktarma, otomatik güncelleme,
@@ -29,7 +32,7 @@ cd flugel-island
 ./kur.sh
 ```
 Sonra oturumu kapatıp aç. Veri sekmeleri ana [FLUGEL](https://github.com/gok8lp/flugel) deposundaki
-`ust-panel-veri` ve `vm` betiklerini kullanır; onlar olmadan da ada, canlı etkinlikler, bildirimler, PiP ve
+`ust-panel-veri`, `cs2-veri` ve `vm` betiklerini kullanır; onlar olmadan da ada, canlı etkinlikler, bildirimler, PiP ve
 kısayollar çalışır.
 
 ## Lisans

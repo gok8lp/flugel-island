@@ -112,6 +112,11 @@ export default class FlugelIslandAyarlari extends ExtensionPreferences {
             [['hover', _('Üzerine gelince')], ['click', _('Sadece tıklayınca')]]);
         this._baglan(a, tetikId);
         g.add(tetik);
+        const [te, teId] = secim(a, 'tam-ekran-kipi', _('Tam ekranda ada'),
+            _('Ekranın üst kenarına yapışık çentik olur; fare üst ortaya gelince aşağı kayar'),
+            [['gizli', _('Sadece fareyle (oyun modu)')], ['bildirim', _('Bildirim ve ses/parlaklıkta da')], ['canli', _('Canlı etkinliklerde de (maç skoru…)')]]);
+        this._baglan(a, teId);
+        g.add(te);
         g.add(sayi(a, 'hover-gecikme', _('Üzerine gelince açılma gecikmesi'), _('milisaniye'), 0, 2000, 20));
         g.add(sayi(a, 'monitor', _('Ekran'), _('-1 = birincil ekran; 0, 1… = ekran sırası'), -1, 7, 1));
         const [panik, panikId] = secim(a, 'panik-onay', _('Panik onayı'), _('Yanlışlıkla basılmasın'),
@@ -348,20 +353,97 @@ export default class FlugelIslandAyarlari extends ExtensionPreferences {
     _kripto() {
         const a = this._ayar;
         const sayfa = new Adw.PreferencesPage({title: _('Kripto'), icon_name: 'money-symbolic'});
-        const g = new Adw.PreferencesGroup({title: _('Varlıklar'), description: _('Kaynak: Binance açık piyasa verisi (anahtarsız)')});
-        for (const [k, ad] of [['BTC', 'Bitcoin'], ['ETH', 'Ethereum'], ['USD', _('Dolar / TL')], ['EUR', _('Euro / TL')]]) {
-            const row = new Adw.SwitchRow({title: ad, active: a.get_strv('kripto-varliklar').includes(k)});
-            row.connect('notify::active', () => {
-                const s = a.get_strv('kripto-varliklar').filter(x => x !== k);
-                a.set_strv('kripto-varliklar', row.active ? [...s, k] : s);
+        // izleme listesi: sıra kartlardaki sıradır (yukarı/aşağı), yeni koin Island'daki "Koin ekle" ya da aşağıdaki kutudan
+        const liste = new Adw.PreferencesGroup({title: _('İzleme listesi'),
+            description: _('Kaynak: Binance açık piyasa verisi (anahtarsız). USD ve EUR: TL karşılığı.')});
+        const satirlar = [];
+        const listeYaz = () => {
+            satirlar.splice(0).forEach(r => liste.remove(r));
+            const l = a.get_strv('kripto-varliklar');
+            l.forEach((k, i) => {
+                const row = new Adw.ActionRow({title: k});
+                const tasi = (yon, ikonAd, ipucu) => {
+                    const b = new Gtk.Button({icon_name: ikonAd, valign: Gtk.Align.CENTER, tooltip_text: ipucu,
+                        css_classes: ['flat'], sensitive: yon < 0 ? i > 0 : i < l.length - 1});
+                    b.connect('clicked', () => {
+                        const y = [...l];
+                        [y[i], y[i + yon]] = [y[i + yon], y[i]];
+                        a.set_strv('kripto-varliklar', y);
+                    });
+                    row.add_suffix(b);
+                };
+                tasi(-1, 'go-up-symbolic', _('Yukarı'));
+                tasi(1, 'go-down-symbolic', _('Aşağı'));
+                const sil = new Gtk.Button({icon_name: 'user-trash-symbolic', valign: Gtk.Align.CENTER, tooltip_text: _('Listeden çıkar'),
+                    css_classes: ['flat']});
+                sil.connect('clicked', () => a.set_strv('kripto-varliklar', l.filter(x => x !== k)));
+                row.add_suffix(sil);
+                liste.add(row);
+                satirlar.push(row);
             });
-            g.add(row);
-        }
+            const ekle = new Adw.EntryRow({title: _('Sembol ekle (ör. SOL, PEPE, USD)'), show_apply_button: true});
+            ekle.connect('apply', () => {
+                const k = ekle.text.trim().toUpperCase().replace(/USDT$/, '');
+                if (/^[A-Z0-9]{2,12}$/.test(k) && !a.get_strv('kripto-varliklar').includes(k))
+                    a.set_strv('kripto-varliklar', [...a.get_strv('kripto-varliklar'), k]);
+                ekle.text = '';
+            });
+            liste.add(ekle);
+            satirlar.push(ekle);
+        };
+        listeYaz();
+        const listeId = a.connect('changed::kripto-varliklar', () => listeYaz());
+        sayfa.add(liste);
+
+        // alarmlar
+        const alarm = new Adw.PreferencesGroup({title: _('Fiyat alarmları'),
+            description: _('Island\'da koinin grafiğinden kurulur; fiyat eşiği geçince kapsülde uyarı çıkar ve alarm silinir.')});
+        const alarmSatir = [];
+        const alarmYaz = () => {
+            alarmSatir.splice(0).forEach(r => alarm.remove(r));
+            let l = [];
+            try {
+                l = JSON.parse(a.get_string('kripto-alarmlar') || '[]');
+            } catch (e) {
+                l = [];
+            }
+            if (!l.length) {
+                const r = new Adw.ActionRow({title: _('Kurulu alarm yok')});
+                alarm.add(r);
+                alarmSatir.push(r);
+            }
+            for (const x of l) {
+                const r = new Adw.ActionRow({title: `${x.s}  ${x.yon === 'ust' ? '≥' : '≤'} ${x.fiyat}`,
+                    subtitle: GLib.DateTime.new_from_unix_local(x.olustu ?? 0).format('%d.%m.%Y %H:%M')});
+                const sil = new Gtk.Button({icon_name: 'user-trash-symbolic', valign: Gtk.Align.CENTER, css_classes: ['flat'],
+                    tooltip_text: _('Alarmı sil')});
+                sil.connect('clicked', () => a.set_string('kripto-alarmlar', JSON.stringify(l.filter(y => y.id !== x.id))));
+                r.add_suffix(sil);
+                alarm.add(r);
+                alarmSatir.push(r);
+            }
+        };
+        alarmYaz();
+        const alarmId = a.connect('changed::kripto-alarmlar', () => alarmYaz());
+        alarm.add(anahtar(a, 'kripto-alarm-ses', _('Alarm çalınca ses'), null));
+        sayfa.add(alarm);
+        sayfa.connect('destroy', () => {
+            a.disconnect(listeId);
+            a.disconnect(alarmId);
+            a.disconnect(donemId);
+        });
+
+        const g = new Adw.PreferencesGroup({title: _('Görünüm ve yenileme')});
+        const [donem, donemId] = secim(a, 'kripto-donem', _('Grafik açılış dönemi'), _('Koin ayrıntısı ilk bu dönemle açılır'),
+            [['1s', _('1 saat')], ['24s', _('24 saat')], ['7g', _('7 gün')], ['30g', _('30 gün')], ['1y', _('1 yıl')]]);
+        g.add(donem);
+        g.add(anahtar(a, 'kripto-mini-grafik', _('Kartlarda küçük grafik'), _('24 saatlik eğri')));
         g.add(anahtar(a, 'kripto-renk', _('Değişimde renk kullan'), _('Kapalıysa siyah-beyaz')));
-        g.add(sayi(a, 'kripto-esik', _('Büyük değişim uyarısı'), _('% (24 saat)'), 1, 50, 0.5, 1));
-        g.add(sayi(a, 'yenileme-kripto', _('Fiyat yenileme'), _('saniye'), 15, 600, 5));
+        g.add(sayi(a, 'kripto-esik', _('Büyük değişim uyarısı'), _('% (24 saat, BTC ve ETH)'), 1, 50, 0.5, 1));
+        g.add(sayi(a, 'yenileme-kripto', _('Fiyat yenileme'), _('saniye (alarmlar da bu aralıkla denetlenir)'), 15, 600, 5));
         sayfa.add(g);
-        sifirla(a, ['kripto-varliklar', 'kripto-renk', 'kripto-esik', 'yenileme-kripto'], sayfa);
+        sifirla(a, ['kripto-varliklar', 'kripto-renk', 'kripto-esik', 'yenileme-kripto', 'kripto-donem', 'kripto-mini-grafik',
+            'kripto-alarm-ses', 'kripto-isaretler'], sayfa);
         return sayfa;
     }
 
@@ -373,8 +455,64 @@ export default class FlugelIslandAyarlari extends ExtensionPreferences {
         g.add(anahtar(a, 'mac-canli-etkinlik', _('Canlı maç kapsülde'), _('Canlı maç olunca skor adada görünür')));
         g.add(sayi(a, 'basket-yakin-dk', _('Maçım yaklaşıyor'), _('dakika kala'), 15, 720, 15));
         g.add(sayi(a, 'yenileme-maclar', _('Maç yenileme'), _('saniye (canlı maç varken sunucu 2 dk\'da bir günceller)'), 60, 3600, 30));
+        g.add(sayi(a, 'mac-min-yildiz', _('Öne çıkanlar'), _('en az bu kadar yıldızlı maçlar (favoriler, derbiler, özel maçlar her zaman)'), 0, 5, 1));
         sayfa.add(g);
-        sifirla(a, ['mac-canli-etkinlik', 'basket-yakin-dk', 'yenileme-maclar'], sayfa);
+
+        // favori takımlar: ada göre (aksan ve büyük/küçük harf önemsiz); Island'da maça tıklayınca da eklenir
+        const fav = new Adw.PreferencesGroup({title: _('Favori takımlar'),
+            description: _('Favori takımların maçları her listede en üstte; canlıysa kapsülde önce onlar gösterilir.')});
+        const favSatir = [];
+        const favYaz = () => {
+            favSatir.splice(0).forEach(r => fav.remove(r));
+            for (const t of a.get_strv('mac-favoriler')) {
+                const r = new Adw.ActionRow({title: t});
+                const sil = new Gtk.Button({icon_name: 'user-trash-symbolic', valign: Gtk.Align.CENTER, css_classes: ['flat'],
+                    tooltip_text: _('Favorilerden çıkar')});
+                sil.connect('clicked', () => a.set_strv('mac-favoriler', a.get_strv('mac-favoriler').filter(x => x !== t)));
+                r.add_suffix(sil);
+                fav.add(r);
+                favSatir.push(r);
+            }
+            const ekle = new Adw.EntryRow({title: _('Takım ekle (ör. Galatasaray, Eternal Fire)'), show_apply_button: true});
+            ekle.connect('apply', () => {
+                const t = ekle.text.trim();
+                if (t && !a.get_strv('mac-favoriler').includes(t))
+                    a.set_strv('mac-favoriler', [...a.get_strv('mac-favoriler'), t]);
+                ekle.text = '';
+            });
+            fav.add(ekle);
+            favSatir.push(ekle);
+        };
+        favYaz();
+        const favId = a.connect('changed::mac-favoriler', () => favYaz());
+        sayfa.connect('destroy', () => a.disconnect(favId));
+        sayfa.add(fav);
+
+        // kategoriler
+        const kat = new Adw.PreferencesGroup({title: _('Kategoriler'), description: _('Maçlar sekmesinde gösterilecek bölümler')});
+        for (const [k, ad] of [['onemli', _('Öne çıkanlar')], ['futbol', _('Futbol')], ['basketbol', _('Basketbol')], ['milli', _('Milli maçlar')],
+            ['derbi', _('Derbiler')], ['takimlar', _('Takımlarım')], ['ozel', _('Özel maçlar')], ['cs2', 'CS2']]) {
+            const row = new Adw.SwitchRow({title: ad, active: a.get_strv('mac-kategoriler').includes(k)});
+            row.connect('notify::active', () => {
+                const sira = ['onemli', 'futbol', 'basketbol', 'milli', 'derbi', 'takimlar', 'ozel', 'cs2'];
+                const s = new Set(a.get_strv('mac-kategoriler'));
+                if (row.active)
+                    s.add(k);
+                else
+                    s.delete(k);
+                a.set_strv('mac-kategoriler', sira.filter(x => s.has(x)));
+            });
+            kat.add(row);
+        }
+        sayfa.add(kat);
+
+        const cs = new Adw.PreferencesGroup({title: 'CS2', description: _('Kaynak: HLTV maçlar sayfası (bu PC\'deki cs2-veri botu); ulaşılamazsa bo3.gg')});
+        cs.add(anahtar(a, 'cs2-etkin', _('CS2 maçları'), _('Canlı raund skoru, harita, HLTV yıldızları')));
+        cs.add(sayi(a, 'cs2-min-yildiz', _('Kapsülde canlı CS2'), _('en az HLTV yıldızı (favori takımlar her zaman)'), 0, 5, 1));
+        cs.add(sayi(a, 'yenileme-cs2', _('CS2 yenileme'), _('saniye (canlıyken raundları yakalamak için kısa tut)'), 20, 600, 5));
+        sayfa.add(cs);
+        sifirla(a, ['mac-canli-etkinlik', 'basket-yakin-dk', 'yenileme-maclar', 'mac-min-yildiz', 'mac-favoriler', 'mac-kategoriler',
+            'cs2-etkin', 'cs2-min-yildiz', 'yenileme-cs2'], sayfa);
         return sayfa;
     }
 

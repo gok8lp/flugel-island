@@ -24,7 +24,7 @@ export function eklentiYolu(yol) {
 export const dosya = alt => `${EXT}/${alt}`;
 
 // ---------- simgeler (kural: kendi simgelerimiz ikon/<ad>-mono.svg, gerisi tema simgesi) ----------
-const OZEL_IKONLAR = new Set(['anime', 'basket', 'manga', 'kurukafa', 'panik', 'eclipse', 'kapat-daire', 'kalkan', 'fincan', 'goz-kapali', 'top',
+const OZEL_IKONLAR = new Set(['anime', 'basket', 'manga', 'kurukafa', 'panik', 'eclipse', 'kapat-daire', 'kalkan', 'fincan', 'goz-kapali', 'top', 'vm-windows', 'vm-ubuntu', 'vm-mullvad',
     'coin-btc', 'coin-eth', 'coin-sol', 'coin-bnb', 'coin-xrp', 'coin-doge', 'coin-avax', 'coin-ada']);
 const ikonOnbellek = new Map();
 export function ikon(ad) {
@@ -107,6 +107,9 @@ export function bash(betik) {
 }
 
 // ---------- metin biçimleri ----------
+// sunucudan gelen metinlerdeki emojiler arayüzde gösterilmez
+export const emojisiz = t => String(t ?? '').replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}]/gu, '').replace(/\u{FE0F}|\u{200D}/gu, '')
+    .replace(/[ \t]{2,}/g, ' ').trim();
 export const kac = t => GLib.markup_escape_text(String(t ?? ''), -1);
 export function para(n, ondalik) {
     if (n === null || n === undefined)
