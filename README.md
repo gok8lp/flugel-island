@@ -1,0 +1,60 @@
+# FLUGEL Island
+
+A Dynamic Island for **GNOME Shell 50**: the whole top bar becomes one black capsule in the middle of the screen
+that morphs with a spring animation into live activities, notifications and a tabbed control card.
+Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [README.tr.md](README.tr.md)
+
+![capsule](docs/kapsul.png)
+
+| Card | Anime preview | Crypto |
+|---|---|---|
+| ![card](docs/kart.png) | ![anime](docs/anime-onizleme.png) | ![crypto](docs/kripto.png) |
+
+| Notification from the island | Virtual machines |
+|---|---|
+| ![notification](docs/bildirim.png) | ![vm](docs/vm.png) |
+
+## What it does
+- **Only the island in the top bar.** Clock, battery, Quick Settings, calendar, tray icons, Activities and
+  workspaces live inside it; Super+S, Super+V and the volume/brightness popups keep working.
+- **Four states:** idle capsule (workspaces, server dot, clock, battery) → compact live activity → split with
+  a second bubble → expanded card. Width, height and corner radius move together on one damped spring;
+  content cross-fades; "Reduce animations" is respected.
+- **Live activities** (priority order, each can be switched off): screen recording/mic/camera, notifications,
+  panic mode, server alerts, GPU VM running, media (cover + controls), my referee matches and live scores,
+  anime episodes, big crypto moves, volume/brightness, charging, wireless keyboard/mouse, a news watch word.
+- **Notifications** open as an animated banner from the island instead of GNOME's banner.
+- **Card tabs:** Quick (pinned apps, force quit, panic, keep-awake, screenshot/recording), Shortcuts (icon grid +
+  keyboard shortcuts), System (PC, battery, server), Virtual machines (cards with start/connect/graceful shutdown),
+  Crypto (sparklines, 24 h / 7 d chart), Matches (my assignments, today/tomorrow/past), Anime & manga (covers with
+  title and MAL score, hover preview with Turkish summary, IMDb rating, legal streaming links).
+- **Window helpers:** picture-in-picture always opens bottom-left and remembers where you put it; "Add to desktop".
+- **Dock:** hover magnification for Ubuntu Dock / Dash to Dock icons.
+- **Touchpad:** two-finger scroll on the capsule switches workspaces.
+- **Settings:** an 11-page Adwaita window (every key has a control, per-page reset, JSON import/export,
+  automatic updates, language Türkçe/English).
+
+## Requirements
+GNOME Shell 50 (Wayland). The data tabs read JSON from small helper scripts (`ust-panel-veri`, `vm`) that live in
+the main [FLUGEL](https://github.com/gok8lp/flugel) repository and talk to a home server; without them the island,
+live activities, notifications, PiP and shortcuts still work and the data tabs show "unavailable".
+
+## Install
+```bash
+git clone https://github.com/gok8lp/flugel-island
+cd flugel-island
+./kur.sh          # copies to ~/.local/share/gnome-shell/extensions, compiles schema and translations
+```
+Then log out and back in (Wayland loads new extensions only at login).
+
+## Develop
+```bash
+npm install
+npm run lint      # eslint (gjs style)
+npm test          # unit tests for the activity model
+flugel-island@flugel/po/derle.sh --kontrol   # translations: extract, merge, compile, fail if missing
+```
+
+## Licence
+GPL-3.0-or-later. Forked from hacksynth/gnome-dynamic-island (GPL-2.0-or-later) and HIMURAw/gnome-dynamic-island
+(GPL-3.0) — see [THIRD_PARTY.md](THIRD_PARTY.md) for credits, data sources and trademarks.
