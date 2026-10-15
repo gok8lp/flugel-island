@@ -15,6 +15,11 @@ tema, dokunmatik yüzeyli dizüstü için tasarlandı. English: [README.md](READ
   sunucu uyarısı, GPU sanal makinesi, çalan medya, hakemlik maçlarım ve canlı skor, anime bölümü, kripto hareketi,
   ses/parlaklık, şarj, kablosuz klavye/fare, haber takip kelimesi.
 - **Bildirimler** GNOME afişi yerine adadan animasyonlu afiş olarak açılır.
+- **[Atoll](https://github.com/Ebullioscopic/Atoll)'dan esinlenenler (GPL-3.0, macOS; sadece fikir, kod GNOME için yazıldı):**
+  sürüklenebilir ilerlemeli, ±10 sn, önceki/sonraki, çıkış cihazı, iki parmak kaydırma ve canlı ekolayzerli medya
+  oynatıcı; güç paneli (ekranı kapat, kilitle, askıya al, oturumu kapat, yeniden başlat, kapat — GNOME'un onay
+  pencereleriyle); kapsülde geri sayan zamanlayıcı; pano geçmişi (sadece bellekte); renk seçici; indirme takibi;
+  rahatsız etme göstergesi; kart başlığında hava durumu (Open-Meteo); yaylanan düğmeler ve sıralı kart animasyonları.
 - **Tam ekran ve büyütülmüş uygulamalar:** tam ekranda uygulama adanın şeridinin altına sığacak kadar küçülür; ada
   görünür kalır ve hiçbir şeyi örtmez (tıklamalar doğru yere gider). Büyütülmüş pencerede şerit uygulamanın başlık
   rengini alır, ada uygulamaya gömülü görünür. İstenirse çentik kipi de seçilebilir.

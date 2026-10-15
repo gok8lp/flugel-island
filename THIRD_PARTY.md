@@ -24,3 +24,7 @@ Because GPL-2.0-or-later and GPL-3.0 code are combined, **the whole extension is
 - `ikon/renkli/` holds the favicons of Crunchyroll, HIDIVE, Netflix, MyAnimeList and AniList, used only as link
   buttons to those services. They are trademarks of their respective owners and are not covered by the GPL.
 - Re:Zero characters © Tappei Nagatsuki / KADOKAWA; the chibi drawings are fan art made for this project.
+
+- Design ideas (media player layout, gestures, tools) from [Atoll](https://github.com/Ebullioscopic/Atoll) by Ebullioscopic
+  (GPL-3.0). No code was copied; the GNOME implementation is original.
+- Weather data: [Open-Meteo](https://open-meteo.com) (CC BY 4.0), fetched by the user's own helper script.

@@ -24,6 +24,11 @@ Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [READ
   panic mode, server alerts, GPU VM running, media (cover + controls), my referee matches and live scores,
   anime episodes, big crypto moves, volume/brightness, charging, wireless keyboard/mouse, a news watch word.
 - **Notifications** open as an animated banner from the island instead of GNOME's banner.
+- **Inspired by [Atoll](https://github.com/Ebullioscopic/Atoll) (GPL-3.0, macOS; ideas only, code written for GNOME):** a media
+  player with draggable progress, ±10 s, previous/next, output device, two-finger swipe and a live equalizer; a power
+  panel (screen off, lock, suspend, log out, restart, shut down — GNOME's own confirmation dialogs); timer with a
+  countdown in the capsule; clipboard history (memory only); color picker; download progress; Do Not Disturb
+  indicator; weather in the card header (Open-Meteo); springy buttons and staggered card animations.
 - **Fullscreen and maximized apps:** in fullscreen the app shrinks just enough to sit below the island strip, so the
   island stays visible and covers nothing (input is mapped exactly); with a maximized window the strip takes the
   app's header color and the island looks built into the app. A notch mode is still available.
