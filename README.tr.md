@@ -15,6 +15,9 @@ tema, dokunmatik yüzeyli dizüstü için tasarlandı. English: [README.md](READ
   sunucu uyarısı, GPU sanal makinesi, çalan medya, hakemlik maçlarım ve canlı skor, anime bölümü, kripto hareketi,
   ses/parlaklık, şarj, kablosuz klavye/fare, haber takip kelimesi.
 - **Bildirimler** GNOME afişi yerine adadan animasyonlu afiş olarak açılır.
+- **Tam ekran ve büyütülmüş uygulamalar:** tam ekranda uygulama adanın şeridinin altına sığacak kadar küçülür; ada
+  görünür kalır ve hiçbir şeyi örtmez (tıklamalar doğru yere gider). Büyütülmüş pencerede şerit uygulamanın başlık
+  rengini alır, ada uygulamaya gömülü görünür. İstenirse çentik kipi de seçilebilir.
 - **Sekmeler:** Hızlı, Kısayollar, Sistem, Sanal makineler, Kripto (Binance'teki her koin; 1 saatten 1 yıla grafik,
   imleçle inceleme, sürükleyerek ölçme, işaret çizgileri, kapsülde çalan fiyat alarmları), Maçlar (Öne çıkanlar,
   Futbol, Basketbol, Milli, Derbiler, Takımlarım, Özel, CS2; HLTV gibi 0-5 yıldız, favori takımlar üstte, kapsülde
