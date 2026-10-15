@@ -20,6 +20,9 @@ tema, dokunmatik yüzeyli dizüstü için tasarlandı. English: [README.md](READ
   oynatıcı; güç paneli (ekranı kapat, kilitle, askıya al, oturumu kapat, yeniden başlat, kapat — GNOME'un onay
   pencereleriyle); kapsülde geri sayan zamanlayıcı; pano geçmişi (sadece bellekte); renk seçici; indirme takibi;
   rahatsız etme göstergesi; kart başlığında hava durumu (Open-Meteo); yaylanan düğmeler ve sıralı kart animasyonları.
+- **Çentik kipi (varsayılan):** pencereler ekranın tamamını kullanır; ada üst kenara gömülü, kavisli siyah bir çentik
+  olur (MacBook gibi) ve tam ekranda da görünür kalır.
+- **Akış sekmesi:** FLUGEL Akış haberleri (sana özel, öne çıkanlar, oyun, teknoloji, anime…) görselli ve özetli.
 - **Tam ekran ve büyütülmüş uygulamalar:** tam ekranda uygulama adanın şeridinin altına sığacak kadar küçülür; ada
   görünür kalır ve hiçbir şeyi örtmez (tıklamalar doğru yere gider). Büyütülmüş pencerede şerit uygulamanın başlık
   rengini alır, ada uygulamaya gömülü görünür. İstenirse çentik kipi de seçilebilir.

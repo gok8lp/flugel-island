@@ -29,6 +29,9 @@ Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [READ
   panel (screen off, lock, suspend, log out, restart, shut down — GNOME's own confirmation dialogs); timer with a
   countdown in the capsule; clipboard history (memory only); color picker; download progress; Do Not Disturb
   indicator; weather in the card header (Open-Meteo); springy buttons and staggered card animations.
+- **Notch mode (default):** windows use the whole screen; the island is built into the top edge as a black notch with
+  curved fillets (like a MacBook) and stays visible in fullscreen too.
+- **Feed tab:** the FLUGEL Akış news feed (for you, highlights, games, tech, anime…) with thumbnails and summaries.
 - **Fullscreen and maximized apps:** in fullscreen the app shrinks just enough to sit below the island strip, so the
   island stays visible and covers nothing (input is mapped exactly); with a maximized window the strip takes the
   app's header color and the island looks built into the app. A notch mode is still available.
