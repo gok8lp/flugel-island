@@ -31,6 +31,8 @@ Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [READ
   indicator; weather in the card header (Open-Meteo); springy buttons and staggered card animations.
 - **Notch mode (default):** windows use the whole screen; the island is built into the top edge as a black notch with
   curved fillets (like a MacBook) and stays visible in fullscreen too.
+- **Games tab:** this month's PlayStation Plus games (Essential + Extra/Premium catalog, from the official PlayStation
+  Blog), free games on Epic, PC deals, Steam sale/top sellers/new releases and a price search (Steam TR + CheapShark).
 - **Feed tab:** the FLUGEL Akış news feed (for you, highlights, games, tech, anime…) with thumbnails and summaries.
 - **Fullscreen and maximized apps:** in fullscreen the app shrinks just enough to sit below the island strip, so the
   island stays visible and covers nothing (input is mapped exactly); with a maximized window the strip takes the

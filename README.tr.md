@@ -22,6 +22,8 @@ tema, dokunmatik yüzeyli dizüstü için tasarlandı. English: [README.md](READ
   rahatsız etme göstergesi; kart başlığında hava durumu (Open-Meteo); yaylanan düğmeler ve sıralı kart animasyonları.
 - **Çentik kipi (varsayılan):** pencereler ekranın tamamını kullanır; ada üst kenara gömülü, kavisli siyah bir çentik
   olur (MacBook gibi) ve tam ekranda da görünür kalır.
+- **Oyunlar sekmesi:** bu ayın PlayStation Plus oyunları (Essential + Extra/Premium katalog, resmi PlayStation Blog'dan),
+  Epic'te ücretsizler, PC fırsatları, Steam indirim/çok satanlar/yeni çıkanlar ve fiyat arama (Steam TR + CheapShark).
 - **Akış sekmesi:** FLUGEL Akış haberleri (sana özel, öne çıkanlar, oyun, teknoloji, anime…) görselli ve özetli.
 - **Tam ekran ve büyütülmüş uygulamalar:** tam ekranda uygulama adanın şeridinin altına sığacak kadar küçülür; ada
   görünür kalır ve hiçbir şeyi örtmez (tıklamalar doğru yere gider). Büyütülmüş pencerede şerit uygulamanın başlık
