@@ -3,6 +3,8 @@
 // genişlikte yapılır ama YERİNDE kalır: böylece Super+S (Hızlı Ayarlar), Super+V (takvim/bildirimler) gibi
 // kısayollar ve GNOME'un ses/parlaklık göstergesi çalışmaya devam eder. Hızlı Ayarlar ve takvim menüleri
 // Island'ın altında açılır (kaynak aktörleri adanın çapasıdır). Arka plan uygulama simgelerini tepsi.js alır.
+// Üst çubuğun kendisi de (şeffaf, tam genişlikte şerit) yer kaplamaz: ekran alanı ayırmaz, tıklama yakalamaz,
+// görünmez. Böylece büyütülmüş pencereler ekranın en üstüne kadar uzanır; ada onlarla çakışınca çentik olur.
 // Eklenti kapanınca ya da 'ust-cubuk-sade' kapatılınca her şey eski haline döner.
 import St from 'gi://St';
 import GLib from 'gi://GLib';
@@ -31,6 +33,7 @@ export class UstCubuk {
         if (!this._ayar.get_boolean('ust-cubuk-sade'))
             return;
         Main.panel.add_style_class_name('flugel-sade-panel');
+        this._seridiBosalt();
         const kutular = [Main.panel._leftBox, Main.panel._centerBox, Main.panel._rightBox];
         for (const kutu of kutular) {
             kutu.get_children().forEach(c => this._gizle(c));
@@ -84,7 +87,48 @@ export class UstCubuk {
             k.style = 'padding: 0; margin: 0; spacing: 0; border-width: 0; min-width: 0; -natural-hpadding: 0px; -minimum-hpadding: 0px;';
     }
 
+    _seridiBosalt() {
+        const lm = Main.layoutManager;
+        const kayit = lm._trackedActors?.find(a => a.actor === lm.panelBox);
+        if (!kayit)
+            return;
+        this._serit = {kayit, struts: kayit.affectsStruts, girdi: kayit.affectsInputRegion, tamEkran: kayit.trackFullscreen,
+            opaklik: lm.panelBox.opacity};
+        kayit.affectsStruts = false;
+        kayit.affectsInputRegion = false;
+        kayit.trackFullscreen = false;   // tam ekrandan çıkınca GNOME şeridi geri göstermesin
+        // Gizlenmez (GNOME, Hızlı Ayarlar/Takvim menüsünü ve Super+S/Super+V'yi göstergesi ekrandayken açar):
+        // ekranın üstüne kaydırılır ve saydamlaştırılır; böylece tıklama yakalamaz, pencerelerin üstüne çizilmez.
+        Main.panel.reactive = false;
+        lm.panelBox.opacity = 0;
+        this._kaydir = () => {
+            lm.panelBox.translation_y = -lm.panelBox.height;
+        };
+        this._kaydir();
+        this._seritId = lm.panelBox.connect('notify::height', this._kaydir);
+        lm._queueUpdateRegions();
+    }
+
+    _seridiGeriVer() {
+        if (!this._serit)
+            return;
+        const {kayit, struts, girdi, tamEkran, opaklik} = this._serit;
+        this._serit = null;
+        const kutu = Main.layoutManager.panelBox;
+        if (this._seritId)
+            kutu.disconnect(this._seritId);
+        this._seritId = 0;
+        kayit.affectsStruts = struts;
+        kayit.affectsInputRegion = girdi;
+        kayit.trackFullscreen = tamEkran;
+        kutu.translation_y = 0;
+        kutu.opacity = opaklik;
+        Main.panel.reactive = true;
+        Main.layoutManager._queueUpdateRegions();
+    }
+
     _geriAl() {
+        this._seridiGeriVer();
         for (const id of this._bekleyen)
             GLib.source_remove(id);
         this._bekleyen.clear();
