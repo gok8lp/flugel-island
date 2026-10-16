@@ -24,6 +24,11 @@ tema, dokunmatik yüzeyli dizüstü için tasarlandı. English: [README.md](READ
   oynatıcı; güç paneli (ekranı kapat, kilitle, askıya al, oturumu kapat, yeniden başlat, kapat — GNOME'un onay
   pencereleriyle); kapsülde geri sayan zamanlayıcı; pano geçmişi (sadece bellekte); renk seçici; indirme takibi;
   rahatsız etme göstergesi; kart başlığında hava durumu (Open-Meteo); yaylanan düğmeler ve sıralı kart animasyonları.
+- **Atoll düzeni (Ayarlar → Island görünümü → Tasarım; tek tıkla önceki v2.8.0 görünümüne dönülür):** büyük kapaklı ve
+  köşesinde çalan uygulamanın simgesi olan medya oynatıcı; sanatçı, ilerleme, ekolayzer ve zemin kapağın vurgu rengiyle
+  tonlanır; karıştır ve tekrar. Geçmiş / Favoriler sekmeli, aramalı, türüne göre simgeli pano yöneticisi; HEX/RGB/HSL/HSV
+  biçimli iki sütunlu renk seçici; Sistem sekmesinde canlı izleme (işlemci, bellek, ekran kartı alan grafikli; ağ ve disk
+  iki yönlü; NVIDIA kart ölçmek için uykudan uyandırılmaz).
 - **Hızlı sekmesindeki araçlar:** yazarken sonuç veren hesap makinesi (yüzde, üs, kök, derece; Enter kopyalar),
   turlu kronometre (çalışırken kapsülde), panodaki bağlantının QR kodu (telefonla okut), yazdıkça kaydedilen hızlı not
   ve pano dönüştürücüler (BÜYÜK/küçük/Başlık, tek satır, bağlantılardaki izleme eklerini silme); yanında zamanlayıcı,

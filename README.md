@@ -34,6 +34,11 @@ Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [READ
   panel (screen off, lock, suspend, log out, restart, shut down — GNOME's own confirmation dialogs); timer with a
   countdown in the capsule; clipboard history (memory only); color picker; download progress; Do Not Disturb
   indicator; weather in the card header (Open-Meteo); springy buttons and staggered card animations.
+- **Atoll layout (Settings → Island look → Design; one click back to the previous v2.8.0 look):** media player with a large
+  cover and the player's app badge, artist / progress / equalizer / background tinted with the cover's accent color,
+  shuffle and repeat; clipboard manager with History / Favorites tabs, search, type icons and "x min ago"; two-column color
+  picker with HEX/RGB/HSL/HSV formats; live monitor in the System tab (CPU, memory, GPU with area charts, network and disk
+  with mirrored charts; the NVIDIA card is never woken from runtime sleep just to be measured).
 - **Tools in the Quick tab:** calculator that answers as you type (percent, powers, roots, degrees; Enter copies),
   stopwatch with laps (shown in the capsule while running), QR code of the clipboard link (scan it with your phone),
   quick note saved as you type, and clipboard converters (UPPER/lower/Title, single line, strip tracking parameters from
