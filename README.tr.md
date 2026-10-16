@@ -15,6 +15,10 @@ tema, dokunmatik yüzeyli dizüstü için tasarlandı. English: [README.md](READ
   sunucu uyarısı, GPU sanal makinesi, çalan medya, hakemlik maçlarım ve canlı skor, anime bölümü, kripto hareketi,
   ses/parlaklık, şarj, kablosuz klavye/fare, haber takip kelimesi.
 - **Bildirimler** GNOME afişi yerine adadan animasyonlu afiş olarak açılır.
+- **iOS tarzı cam ve hareket:** açık kart ve afişler buzlu cam — arkadaki pencereler ve duvar kağıdı bulanık görünür,
+  köşeler adanın yarıçapıyla kesilir (kapsül, Dynamic Island gibi tam siyah kalır). İçerik değişirken bulanık geçiş
+  (eskisi bulanıklaşıp küçülerek gider, yenisi netleşerek gelir), sekmeler kısa bir bulanıklıkla kayar, kapsül
+  basılınca içe göçüp yaylanır. Cam, bulanıklık, cam opaklığı ve bulanık geçişler ayarlanabilir.
 - **[Atoll](https://github.com/Ebullioscopic/Atoll)'dan esinlenenler (GPL-3.0, macOS; sadece fikir, kod GNOME için yazıldı):**
   sürüklenebilir ilerlemeli, ±10 sn, önceki/sonraki, çıkış cihazı, iki parmak kaydırma ve canlı ekolayzerli medya
   oynatıcı; güç paneli (ekranı kapat, kilitle, askıya al, oturumu kapat, yeniden başlat, kapat — GNOME'un onay
@@ -24,6 +28,8 @@ tema, dokunmatik yüzeyli dizüstü için tasarlandı. English: [README.md](READ
   olur (MacBook gibi) ve tam ekranda da görünür kalır.
 - **Oyunlar sekmesi:** bu ayın PlayStation Plus oyunları (Essential + Extra/Premium katalog, resmi PlayStation Blog'dan),
   Epic'te ücretsizler, PC fırsatları, Steam indirim/çok satanlar/yeni çıkanlar ve fiyat arama (Steam TR + CheapShark).
+  Oyuna sağ tıklayıp **istek listesine** eklenir; fiyat düşünce (Steam + CheapShark), yeni PS Plus aylık oyunları ve
+  yeni Epic ücretsizleri gelince ada haber verir.
 - **Akış sekmesi:** FLUGEL Akış haberleri (sana özel, öne çıkanlar, oyun, teknoloji, anime…) görselli ve özetli.
 - **Tam ekran ve büyütülmüş uygulamalar:** tam ekranda uygulama adanın şeridinin altına sığacak kadar küçülür; ada
   görünür kalır ve hiçbir şeyi örtmez (tıklamalar doğru yere gider). Büyütülmüş pencerede şerit uygulamanın başlık

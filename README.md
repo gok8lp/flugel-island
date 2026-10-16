@@ -24,6 +24,11 @@ Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [READ
   panic mode, server alerts, GPU VM running, media (cover + controls), my referee matches and live scores,
   anime episodes, big crypto moves, volume/brightness, charging, wireless keyboard/mouse, a news watch word.
 - **Notifications** open as an animated banner from the island instead of GNOME's banner.
+- **iOS-style glass and motion:** the open card and banners are frosted glass — windows and wallpaper behind them are
+  blurred, with corners masked to the island's radius (the capsule itself stays pure black, like the Dynamic Island).
+  Content changes use blur transitions (old content blurs and shrinks away, new content comes into focus), tabs slide
+  in with a short blur, and the capsule squishes on press and springs back. Glass, blur radius, glass opacity and
+  blur transitions are configurable.
 - **Inspired by [Atoll](https://github.com/Ebullioscopic/Atoll) (GPL-3.0, macOS; ideas only, code written for GNOME):** a media
   player with draggable progress, ±10 s, previous/next, output device, two-finger swipe and a live equalizer; a power
   panel (screen off, lock, suspend, log out, restart, shut down — GNOME's own confirmation dialogs); timer with a
@@ -33,6 +38,8 @@ Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [READ
   curved fillets (like a MacBook) and stays visible in fullscreen too.
 - **Games tab:** this month's PlayStation Plus games (Essential + Extra/Premium catalog, from the official PlayStation
   Blog), free games on Epic, PC deals, Steam sale/top sellers/new releases and a price search (Steam TR + CheapShark).
+  Right-click a game to add it to a **wishlist**; the island announces a price drop (Steam + CheapShark), new PS Plus
+  monthly games and new free Epic games.
 - **Feed tab:** the FLUGEL Akış news feed (for you, highlights, games, tech, anime…) with thumbnails and summaries.
 - **Fullscreen and maximized apps:** in fullscreen the app shrinks just enough to sit below the island strip, so the
   island stays visible and covers nothing (input is mapped exactly); with a maximized window the strip takes the
