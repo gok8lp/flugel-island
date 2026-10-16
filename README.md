@@ -34,6 +34,10 @@ Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [READ
   panel (screen off, lock, suspend, log out, restart, shut down — GNOME's own confirmation dialogs); timer with a
   countdown in the capsule; clipboard history (memory only); color picker; download progress; Do Not Disturb
   indicator; weather in the card header (Open-Meteo); springy buttons and staggered card animations.
+- **Tools in the Quick tab:** calculator that answers as you type (percent, powers, roots, degrees; Enter copies),
+  stopwatch with laps (shown in the capsule while running), QR code of the clipboard link (scan it with your phone),
+  quick note saved as you type, and clipboard converters (UPPER/lower/Title, single line, strip tracking parameters from
+  links) next to timer, clipboard history, color picker, screenshot/recording, force quit, panic and keep-awake.
 - **Notch mode (default):** windows use the whole screen; the island is built into the top edge as a black notch with
   curved fillets (like a MacBook) and stays visible in fullscreen too.
 - **Games tab:** this month's PlayStation Plus games (Essential + Extra/Premium catalog, from the official PlayStation

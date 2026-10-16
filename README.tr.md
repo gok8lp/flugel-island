@@ -24,6 +24,10 @@ tema, dokunmatik yüzeyli dizüstü için tasarlandı. English: [README.md](READ
   oynatıcı; güç paneli (ekranı kapat, kilitle, askıya al, oturumu kapat, yeniden başlat, kapat — GNOME'un onay
   pencereleriyle); kapsülde geri sayan zamanlayıcı; pano geçmişi (sadece bellekte); renk seçici; indirme takibi;
   rahatsız etme göstergesi; kart başlığında hava durumu (Open-Meteo); yaylanan düğmeler ve sıralı kart animasyonları.
+- **Hızlı sekmesindeki araçlar:** yazarken sonuç veren hesap makinesi (yüzde, üs, kök, derece; Enter kopyalar),
+  turlu kronometre (çalışırken kapsülde), panodaki bağlantının QR kodu (telefonla okut), yazdıkça kaydedilen hızlı not
+  ve pano dönüştürücüler (BÜYÜK/küçük/Başlık, tek satır, bağlantılardaki izleme eklerini silme); yanında zamanlayıcı,
+  pano geçmişi, renk seçici, ekran görüntüsü/kaydı, zorla kapat, panik ve uyku engelleme.
 - **Çentik kipi (varsayılan):** pencereler ekranın tamamını kullanır; ada üst kenara gömülü, kavisli siyah bir çentik
   olur (MacBook gibi) ve tam ekranda da görünür kalır.
 - **Oyunlar sekmesi:** bu ayın PlayStation Plus oyunları (Essential + Extra/Premium katalog, resmi PlayStation Blog'dan),
