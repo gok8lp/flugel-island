@@ -2,7 +2,7 @@
 
 A Dynamic Island for **GNOME Shell 50**: the whole top bar becomes one black capsule in the middle of the screen
 that morphs with a spring animation into live activities, notifications and a tabbed control card.
-Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [README.tr.md](README.tr.md)
+Black-and-white, dark theme, built for a laptop with a touchpad. Turkish guide: [README.tr.md](README.tr.md)
 
 ![capsule](docs/kapsul.png)
 
@@ -26,9 +26,9 @@ Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [READ
 - **Notifications** open as an animated banner from the island instead of GNOME's banner.
 - **iOS-style glass and motion:** the open card and banners are frosted glass — windows and wallpaper behind them are
   blurred, with corners masked to the island's radius (the capsule itself stays pure black, like the Dynamic Island).
-  Content changes use blur transitions (old content blurs and shrinks away, new content comes into focus), tabs slide
+  Content changes can blur the incoming content while the outgoing content fades and shrinks; tabs slide
   in with a short blur, and the capsule squishes on press and springs back. Glass, blur radius, glass opacity and
-  blur transitions are configurable.
+  blur transitions are configurable. Both blur options can be disabled for smoother input on some systems.
 - **Inspired by [Atoll](https://github.com/Ebullioscopic/Atoll) (GPL-3.0, macOS; ideas only, code written for GNOME):** a media
   player with draggable progress, ±10 s, previous/next, output device, two-finger swipe and a live equalizer; a power
   panel (screen off, lock, suspend, log out, restart, shut down — GNOME's own confirmation dialogs); timer with a
@@ -65,7 +65,7 @@ Black-and-white, dark theme, built for a laptop with a touchpad. Türkçe: [READ
 - **Dock:** hover magnification for Ubuntu Dock / Dash to Dock icons.
 - **Touchpad:** two-finger scroll on the capsule switches workspaces.
 - **Settings:** an 11-page Adwaita window (every key has a control, per-page reset, JSON import/export,
-  automatic updates, language Türkçe/English).
+  automatic updates, Turkish/English language selection).
 
 ## Requirements
 GNOME Shell 50 (Wayland). The data tabs read JSON from small helper scripts (`ust-panel-veri`, `cs2-veri`, `vm`) that live in
@@ -86,7 +86,7 @@ npm install
 npm run lint      # eslint (gjs style)
 npm test          # unit tests for the activity model
 flugel-island@flugel/po/derle.sh --kontrol   # translations: extract, merge, compile, fail if missing
-tests/altin/island-test.sh tests/altin/altin.sh  # 71 end-to-end checks in a headless GNOME Shell (virtual pointer/touchpad)
+tests/altin/island-test.sh tests/altin/altin.sh  # headless GNOME Shell checks (virtual pointer/touchpad)
 ```
 
 ## Licence
