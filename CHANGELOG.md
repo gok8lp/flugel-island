@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.0 (unreleased / yayınlanmadı)
+## 3.0.0 (2026-10-18)
 
 - Added the **Quiet Orbit** design with five labelled groups while preserving all existing page IDs and features.
 - Simplified the header to Power, Pin, More and Close; Quick Settings, calendar, activities, settings and workspaces remain in the More strip.
@@ -9,6 +9,8 @@
 - Added a compact media progress line that updates only while visible, at most once per second.
 - Added source-level live activity mute and promotion; privacy, panic and explicitly critical events cannot be muted.
 - Added opaque, blur-free v3 surfaces and shorter non-bouncing motion for smoother pointer input; reduced-motion remains supported.
+- Redesigned music (three-phase equalizer at 2 fps, no cover tint, 44 px play) and notifications (status line, amber for critical; Notifications page with unread count, category grouping, mark read and two-step clear that keeps critical items).
+- Quick grids now re-flow to the real card width (no clipped tiles at 560/720 px, English labels included).
 - Kept **Atoll** and **Classic** as immediate rollback choices in Settings.
 
 ---
