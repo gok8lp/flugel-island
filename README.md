@@ -14,6 +14,24 @@ Black-and-white, dark theme, built for a laptop with a touchpad. Turkish guide: 
 |---|---|
 | ![notification](docs/bildirim.png) | ![vm](docs/vm.png) |
 
+## v3 Quiet Orbit (unreleased)
+
+**English.** Quiet Orbit reorganizes the same features into five labelled groups, a calmer four-action header and a
+**More** strip. The card shows at most two live activities with **+N more**; Quick has a short everyday view plus
+**All**, user-pinned tools, a compact media progress line, and source-level live activity mute/promote controls.
+The surface is opaque and blur is off by default for smooth input. **Atoll** and **Classic** remain available from
+Settings for instant rollback.
+
+**Türkçe.** Quiet Orbit aynı özellikleri beş etiketli grupta, sade dört eylemli başlıkta ve **Daha fazla** şeridinde
+toplar. Kartta en çok iki canlı etkinlik ve **+N daha** görünür; Hızlı sayfasında kısa günlük görünüm, **Tümü**,
+kullanıcının sabitlediği araçlar, kompakt medya ilerleme çizgisi ve kaynak bazlı canlı etkinlik susturma/öne alma
+bulunur. Akıcı giriş için yüzey opaktır ve bulanıklık varsayılan kapalıdır. **Atoll** ve **Klasik** tasarımlarına
+Ayarlardan anında dönülebilir.
+
+| Quiet Orbit · Quick / Hızlı | More / Daha fazla | System / Sistem |
+|---|---|---|
+| ![Quiet Orbit Quick](docs/v3/quick.png) | ![Quiet Orbit More](docs/v3/more.png) | ![Quiet Orbit System](docs/v3/system.png) |
+
 ## What it does
 - **Only the island in the top bar.** Clock, battery, Quick Settings, calendar, tray icons, Activities and
   workspaces live inside it; Super+S, Super+V and the volume/brightness popups keep working.
