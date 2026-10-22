@@ -1,4 +1,9 @@
-# FLUGEL Island
+# GNOME Island
+
+GNOME Shell 50 için kişisel bir masaüstü eklentisidir. Kurulum adımları aşağıdadır;
+üçüncü taraf kaynak ve lisanslar [THIRD_PARTY.md](THIRD_PARTY.md) içindedir.
+Kurulu eklentinin UUID ve ayar şeması mevcut ayarların korunması için değiştirilmemiştir.
+
 
 **GNOME Shell 50** için Dynamic Island: üst çubuğun tamamı ekranın ortasında tek bir siyah kapsüle dönüşür; kapsül
 yaylı bir animasyonla canlı etkinliklere, bildirimlere ve sekmeli bir kontrol kartına dönüşür. Siyah-beyaz, karanlık
@@ -39,7 +44,7 @@ tema, dokunmatik yüzeyli dizüstü için tasarlandı. English: [README.md](READ
   Epic'te ücretsizler, PC fırsatları, Steam indirim/çok satanlar/yeni çıkanlar ve fiyat arama (Steam TR + CheapShark).
   Oyuna sağ tıklayıp **istek listesine** eklenir; fiyat düşünce (Steam + CheapShark), yeni PS Plus aylık oyunları ve
   yeni Epic ücretsizleri gelince ada haber verir.
-- **Akış sekmesi:** FLUGEL Akış haberleri (sana özel, öne çıkanlar, oyun, teknoloji, anime…) görselli ve özetli.
+- **Akış sekmesi:** Akış haberleri (sana özel, öne çıkanlar, oyun, teknoloji, anime…) görselli ve özetli.
 - **Tam ekran ve büyütülmüş uygulamalar:** tam ekranda uygulama adanın şeridinin altına sığacak kadar küçülür; ada
   görünür kalır ve hiçbir şeyi örtmez (tıklamalar doğru yere gider). Büyütülmüş pencerede şerit uygulamanın başlık
   rengini alır, ada uygulamaya gömülü görünür. İstenirse çentik kipi de seçilebilir.
@@ -55,11 +60,11 @@ tema, dokunmatik yüzeyli dizüstü için tasarlandı. English: [README.md](READ
 
 ## Kurulum
 ```bash
-git clone https://github.com/gok8lp/flugel-island
-cd flugel-island
+git clone https://github.com/gok8lp/gnome-island
+cd gnome-island
 ./kur.sh
 ```
-Sonra oturumu kapatıp aç. Veri sekmeleri ana [FLUGEL](https://github.com/gok8lp/flugel) deposundaki
+Sonra oturumu kapatıp aç. Veri sekmeleri ana [Desktop & Server Toolkit](https://github.com/gok8lp/desktop-server-toolkit) deposundaki
 `ust-panel-veri`, `cs2-veri` ve `vm` betiklerini kullanır; onlar olmadan da ada, canlı etkinlikler, bildirimler, PiP ve
 kısayollar çalışır.
 

@@ -1,8 +1,8 @@
 {
-  "name": "flugel",
+  "name": "gnome-island",
   "private": true,
   "type": "module",
-  "description": "FLUGEL — geliştirme araçları (lint ve test); eklentinin kendisi node gerektirmez",
+  "description": "Development checks for gnome-island",
   "scripts": {
     "lint": "eslint flugel-island@flugel/",
     "test": "node --test tests/*.test.js"

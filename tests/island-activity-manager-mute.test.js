@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {createActivity, _setFakeClock} from '../extensions/flugel-island@flugel/src/activity.js';
-import {ActivityManager} from '../extensions/flugel-island@flugel/src/activity-manager.js';
+import {createActivity, _setFakeClock} from '../flugel-island@flugel/src/activity.js';
+import {ActivityManager} from '../flugel-island@flugel/src/activity-manager.js';
 
 function manager() {
     const instance = new ActivityManager();

@@ -1,4 +1,9 @@
-# FLUGEL Island
+# GNOME Island
+
+A personal GNOME extension with its own settings and optional server integrations. The code targets **GNOME Shell 50**.
+For installation, see [Install](#install); third-party origins and licences are in [THIRD_PARTY.md](THIRD_PARTY.md).
+The installed UUID and settings schema keep their historic names for compatibility.
+
 
 A Dynamic Island for **GNOME Shell 50**: the whole top bar becomes one black capsule in the middle of the screen
 that morphs with a spring animation into live activities, notifications and a tabbed control card.
@@ -67,7 +72,7 @@ Ayarlardan anında dönülebilir.
   Blog), free games on Epic, PC deals, Steam sale/top sellers/new releases and a price search (Steam TR + CheapShark).
   Right-click a game to add it to a **wishlist**; the island announces a price drop (Steam + CheapShark), new PS Plus
   monthly games and new free Epic games.
-- **Feed tab:** the FLUGEL Akış news feed (for you, highlights, games, tech, anime…) with thumbnails and summaries.
+- **Feed tab:** the Akış news feed (for you, highlights, games, tech, anime…) with thumbnails and summaries.
 - **Fullscreen and maximized apps:** in fullscreen the app shrinks just enough to sit below the island strip, so the
   island stays visible and covers nothing (input is mapped exactly); with a maximized window the strip takes the
   app's header color and the island looks built into the app. A notch mode is still available.
@@ -87,13 +92,13 @@ Ayarlardan anında dönülebilir.
 
 ## Requirements
 GNOME Shell 50 (Wayland). The data tabs read JSON from small helper scripts (`ust-panel-veri`, `cs2-veri`, `vm`) that live in
-the main [FLUGEL](https://github.com/gok8lp/flugel) repository and talk to a home server; without them the island,
+the main [Desktop & Server Toolkit](https://github.com/gok8lp/desktop-server-toolkit) repository and talk to a home server; without them the island,
 live activities, notifications, PiP and shortcuts still work and the data tabs show "unavailable".
 
 ## Install
 ```bash
-git clone https://github.com/gok8lp/flugel-island
-cd flugel-island
+git clone https://github.com/gok8lp/gnome-island
+cd gnome-island
 ./kur.sh          # copies to ~/.local/share/gnome-shell/extensions, compiles schema and translations
 ```
 Then log out and back in (Wayland loads new extensions only at login).
